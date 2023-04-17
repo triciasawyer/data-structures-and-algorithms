@@ -8,7 +8,9 @@ x - that takes an array of numbers,
 x - and returns a new array of the numbers,
 x - incremented by 1.
 
-Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
+x - Use `forEach` to loop over the input array and work with each value.
+x - Push the new value into a local array.
+x - Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
@@ -23,33 +25,54 @@ const addOne = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named `addExclamation` that takes an array of strings, and returns a new array of the same strings with an "!" added to the end.
+x - Write a function named `addExclamation`
+x - that takes an array of strings,
+and returns a new array of the same strings with an "!" added to the end.
 
-Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
+Use `forEach` to loop over the input array.
+Modify each string, and add the updated value into a local array.
+x - Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
   // Solution code here...
+let stringArray = [];
+arr.forEach(arrayExclamation => {
+  stringArray.push(arrayExclamation + '!');
+})
+return stringArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named `allUpperCase` that takes an array of strings, and returns a new array of the strings converted to upper case.
+x - Write a function named `allUpperCase`
+x - that takes an array of strings,
+and returns a new array of the strings converted to upper case.
 
-Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
+Use `forEach` to loop over the input array.
+The modified strings should each be added into a local array.
+Return that local array.
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
   // Solution code here...
+  let upperArray = [];
+  arr.forEach(upperCaseArray => {
+    upperArray.push(upperCaseArray.toUpperCase());
+  })
+return upperArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".
+Write a function named `greeting`
+that takes in a single string and
+returns the string in all uppercase letters, and followed by an "!".
 
-Then, write a function named `speaker` that takes in an array of strings and a callback function.
+Then, write a function named `speaker`
+that takes in an array of strings and a callback function.
 
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
