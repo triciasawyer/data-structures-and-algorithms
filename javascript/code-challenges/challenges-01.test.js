@@ -67,24 +67,32 @@ return upperArray;
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named `greeting`
-that takes in a single string and
-returns the string in all uppercase letters, and followed by an "!".
+x - Write a function named `greeting`
+x - that takes in a single string and
+x - returns the string in all uppercase letters, and followed by an "!".
 
-Then, write a function named `speaker`
-that takes in an array of strings and a callback function.
+x - Then, write a function named `speaker`
+x - that takes in an array of strings and a callback function.
 
-Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
+x - Use `forEach` to build a new array of strings,
+x - each string modified by the callback.
+x - Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
   // Solution code here...
+  let newWord = (word.toUpperCase + '!');
+  return newWord;
 };
 
 const speaker = (words, callback) => {
   // Solution code here...
+  let newArr = [];
+  words.forEach(string => {
+    newArr.push(string.callback);
+  });
+  return newArr;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -178,13 +186,13 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should provide an array of strings, that get uppercased, and a "!" at the end', () => {
     expect(speaker(['hello', '301', 'students'], greeting)).toStrictEqual(['HELLO!', '301!', 'STUDENTS!']);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should add the number 8 to the array five times', () => {
     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
