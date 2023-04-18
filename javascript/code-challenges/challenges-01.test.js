@@ -81,19 +81,18 @@ x - Return the new array.
 
 const greeting = (word) => {
   // Solution code here...
-  return word.toUpperCase + '!';
+  return word.toUpperCase() + '!';
 }
 
 const speaker = (words, callback) => {
   // Solution code here...
   let newArray = [];
   words.forEach(string => {
-    newArray.push(string.callback);
+    newArray.push(callback(string));
   });
   return newArray;
 };
 
-speaker(greeting);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -116,13 +115,14 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
-  let newArr = [];
-  newArr.push(value);
+  // let arr = [];
+  // arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  let allArray = [];
+  // let allArray = [arr, num];
+  // return
 
 };
 
