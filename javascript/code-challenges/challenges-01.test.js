@@ -103,8 +103,8 @@ x - and pushes the value into the array.
 x - This function does not need a return statement.
 
 x - Then, write a function named addNumbers that takes in four arguments:
-  - A number to be added to an array
-  - An array into which the number should be added
+x  - A number to be added to an array
+x  - An array into which the number should be added
   - The number of times the number should be added
   - A callback function to use to add the numbers to the array (Hint: you already defined it)
 
@@ -115,15 +115,16 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
-  // let arr = [];
-  // arr.push(value);
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  // let allArray = [arr, num];
-  // return
-
+  let allArray = [];
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -201,7 +202,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should add the number 8 to the array five times', () => {
     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
