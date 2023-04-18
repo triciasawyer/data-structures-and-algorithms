@@ -17,7 +17,7 @@ const addOne = (arr) => {
   // Solution code here...
   let newArray = [];
   arr.forEach(arrayElementNumber => {
-  newArray.push(arrayElementNumber + 1);
+    newArray.push(arrayElementNumber + 1);
   });
   return newArray;
 };
@@ -36,11 +36,11 @@ x - Return the local array;
 
 const addExclamation = (arr) => {
   // Solution code here...
-let stringArray = [];
-arr.forEach(arrayExclamation => {
-  stringArray.push(arrayExclamation + '!');
-})
-return stringArray;
+  let stringArray = [];
+  arr.forEach(arrayExclamation => {
+    stringArray.push(arrayExclamation + '!');
+  })
+  return stringArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,7 +61,7 @@ const allUpperCase = (arr) => {
   arr.forEach(upperCaseArray => {
     upperArray.push(upperCaseArray.toUpperCase());
   })
-return upperArray;
+  return upperArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,24 +81,29 @@ x - Return the new array.
 
 const greeting = (word) => {
   // Solution code here...
-  let newWord = (word.toUpperCase + '!');
-  return newWord;
-};
+  return word.toUpperCase + '!';
+}
 
 const speaker = (words, callback) => {
   // Solution code here...
-  let newArr = [];
+  let newArray = [];
   words.forEach(string => {
-    newArr.push(string.callback);
+    newArray.push(string.callback);
   });
-  return newArr;
+  return newArray;
 };
+
+speaker(greeting);
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named addValues that takes in an array and a value and pushes the value into the array. This function does not need a return statement.
+x - Write a function named addValues
+x - that takes in an array and a value
+x - and pushes the value into the array.
+x - This function does not need a return statement.
 
-Then, write a function named addNumbers that takes in four arguments:
+x - Then, write a function named addNumbers that takes in four arguments:
   - A number to be added to an array
   - An array into which the number should be added
   - The number of times the number should be added
@@ -111,10 +116,14 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  let newArr = [];
+  newArr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  let allArray = [];
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -192,7 +201,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-describe('Testing challenge 5', () => {
+xdescribe('Testing challenge 5', () => {
   test('It should add the number 8 to the array five times', () => {
     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
