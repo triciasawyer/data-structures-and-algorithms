@@ -13,7 +13,9 @@ Use forEach to solve this problem.
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
-  let newArray = Math.pow(arr);
+  arr.forEach (Math.pow(arr, 3));
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
