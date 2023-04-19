@@ -131,7 +131,8 @@ const addNumbers = (num, arr, times, callback) => {
 
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store inventory.
+x - Write a function named createList
+x - that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -142,11 +143,20 @@ The inventory is formatted like this:
   { name: 'blueberries', available: false }
 ]
 
-This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
+This function should use forEach to populate your grocery list based on the store's inventory.
+If the item is available, add it to your list.
+Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
   // Solution code here...
+  let list = [];
+  availableItems.forEach((item) => {
+    if (item.available) {
+      list.push(item.name);
+    }
+  })
+  return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -209,7 +219,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
