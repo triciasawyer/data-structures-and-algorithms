@@ -66,7 +66,9 @@ const forLoopTwoToThe = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4, but uses forEach instead of a for loop.
+Write a function named forEachTwoToThe
+that produces the same output as your forLoopTwoToThe function from challenge 4,
+but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
@@ -81,11 +83,18 @@ const forEachTwoToThe = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4 and your forEachTwoToThe function from challenge 5, but uses map instead of a for loop or forEach.
+Write a function named mapTwoToThe
+that produces the same output as your forLoopTwoToThe function from challenge 4
+and your forEachTwoToThe function from challenge 5,
+but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
+  const result = arr.map(val => {
+    return 2**val;
+  })
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -260,7 +269,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(mapTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(mapTwoToThe([0, 4, 5]).length).toStrictEqual(3);
