@@ -12,10 +12,14 @@ Return the new array.
 
 const addTwo = (arr) => {
   // Solution code here...
+  let newArray = [];
+  for(let i = 0; i < arr; + 2)
   arr.forEach(element => {
-
+arr + '2';
+    newArray.push(arr);
   });
-  return
+
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
