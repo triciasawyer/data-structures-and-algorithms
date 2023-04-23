@@ -3,8 +3,8 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function that iterates over an array of people objects
-and creates a new list of each person's full name using the array method 'map'.
+x -Write a function that iterates over an array of people objects
+x -and creates a new list of each person's full name using the array method 'map'.
 Each object will have the shape {firstName:string, lastName:string}
 E.g. [ { firstName:"Jane", lastName:"Doe" }, { firstName:"James", lastName:"Bond"}]
 should convert to ["Jane Doe", "James Bond"]
@@ -13,17 +13,23 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
+  return people.map(person => `${person.firstName} ${person.lastName}`);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named addValues that, given an array of numbers as input, uses reduce to add the values in the array.
+x -Write a function named addValues
+that, given an array of numbers as input,
+uses reduce to add the values in the array.
 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
   // Solution code here...
+  return arr.reduce ((previousIteration, currentValue) => {
+    return previousIteration + currentValue;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,7 +51,9 @@ const addPurchases = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
+Write a function named countNumberOfElements
+that, given an array as input,
+uses reduce to count the number of elements in the array.
 
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
@@ -288,7 +296,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should add the values of an array', () => {
     expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
     expect(addValues([])).toStrictEqual(0);
