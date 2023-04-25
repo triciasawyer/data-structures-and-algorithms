@@ -61,32 +61,43 @@ const joinArray = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named howMuchPencil that takes in a string, as written on the side of a pencil.
+x -Write a function named howMuchPencil
+x -that takes in a string,
+x -as written on the side of a pencil.
 
-As you sharpen the pencil, the string will become shorter and shorter, starting by removing the first letter.
+x -As you sharpen the pencil,
+x -the string will become shorter and shorter,
+x -starting by removing the first letter.
 
-Your function should use slice within a loop and return an array of each successive string result from losing letters to the sharpener, until nothing is left.
+x -Your function should use slice within a loop
+x -and return an array of each successive string result from losing letters to the sharpener, until nothing is left.
 
 For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
+  let result = [str];
   // Solution code here...
+  for (let i = 1; i <= str.length; i++) {
+    result.push(str.slice(i));
+  }
   return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function name wordsToCharList that, given a string as input, returns a new array where every element is a character of the input string.
+x -Write a function name wordsToCharList
+x -that, given a string as input,
+x -returns a new array where every element is a character of the input string.
 
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return arr.split('');
 };
 
 
@@ -273,7 +284,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return a list of shortening words', () => {
     expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
     expect(howMuchPencil('Welcome').length).toStrictEqual(8);
@@ -282,7 +293,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return an array of individual letters', () => {
     expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
     expect(wordsToCharList('Gregor').length).toStrictEqual(6);
