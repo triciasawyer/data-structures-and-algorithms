@@ -104,11 +104,16 @@ const wordsToCharList = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below. Rather than taking the entire recipe, you only want a list of the item names.
+You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below.
+Rather than taking the entire recipe, you only want a list of the item names.
 
-Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
+x -Write a function named listFoods
+x -that takes in the recipe
+x -and returns a new array of the food items without any amount or units.
+x -Just the name. For example, '1 cup flour' will return 'flour'.
 
-Use slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
+x -Use slice for this function, maybe more than once.
+x -The Array.indexOf() method may also be helpful.
 
 Do not use split for this function.
 ------------------------------------------------------------------------------------------------ */
@@ -145,6 +150,11 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+    let ingredient = recipe.ingredients[i];
+    let index = ingredient.indexOf(' ');
+    result.push(ingredient.slice(index + 1).split(' ').slice(1).join(' '));
+  }
   return result;
 };
 
@@ -302,7 +312,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return a list of foods', () => {
     expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
