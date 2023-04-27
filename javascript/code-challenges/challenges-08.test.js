@@ -5,7 +5,7 @@
 CHALLENGE 1 - Review
 
 x -Write a function named sortByChildren
-that sorts the characters below by the number of children in each house (fewest to most).
+x -that sorts the characters below by the number of children in each house (fewest to most).
 If a house has the same number of children,
 sort alphabetically by house name.
 
