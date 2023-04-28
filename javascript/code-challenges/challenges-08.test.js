@@ -6,8 +6,8 @@ CHALLENGE 1 - Review
 
 x -Write a function named sortByChildren
 x -that sorts the characters below by the number of children in each house (fewest to most).
-If a house has the same number of children,
-sort alphabetically by house name.
+x -If a house has the same number of children,
+x -sort alphabetically by house name.
 
 ------------------------------------------------------------------------------------------------ */
 let characters = [
@@ -57,31 +57,43 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
-  charArray.sort((a, b) => {
-    if (a.children.length === b.children.length) {
-      return a.house.localeCompare(b.house);
+  charArray.sort((charA, charB) => {
+    if (charA.children.length < charB.children.length) {
+      return -1;
+    } else if (charA.children.length > charB.children.length) {
+      return 1;
     } else {
-      return a.children.length - b.children.length;
+      // if number of children is the same, sort alphabetically by house name
+      return charA.house.localeCompare(charB.house);
     }
   });
+  return charArray;
 };
 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
+x -Write a function named containsW
+x -that takes in a string.
+x -This function should use a regular expression pattern
+x -to return true if the string contains the letter 'w' in lower case or false if it does not.
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
   // Solution code here...
+  const pattern = /w/;
+  return pattern.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
+x -Write a function named isNum
+x -that takes in a string or number of any length.
+x -This function should use a regular expression pattern
+x -to return true if the input contains a number, and false if the input does not contain a number.
 
 For example:
 12345 returns true
@@ -92,6 +104,8 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  const pattern = /\d/;
+  return pattern.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -207,7 +221,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return true if the input contains a lower case w', () => {
     expect(containsW('hello world')).toBe(true);
   });
@@ -219,7 +233,7 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return true if the input is a number', () => {
     expect(isNum(1234567890)).toBeTruthy();
     expect(isNum('12345')).toBeTruthy();
