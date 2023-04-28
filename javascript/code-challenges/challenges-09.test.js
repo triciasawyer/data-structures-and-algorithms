@@ -40,9 +40,9 @@ const getCourseKeys = (obj) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named checkValues
-that takes in an object and a value
-and returns true if the value is in the object.
+x - Write a function named checkValues
+x - that takes in an object and a value
+x - and returns true if the value is in the object.
 
 
 ------------------------------------------------------------------------------------------------ */
@@ -78,6 +78,13 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  const arr = [];
+
+  for (let name in obj) {
+    arr.push(`${name}: ${obj[name]}`);
+  }
+
+  return arr;
 };
 
 
@@ -85,7 +92,8 @@ const updateNumbers = (obj) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
+x - Write a function named getHouses
+x - that returns a new array containing the names of all of the houses in the data set.
 ------------------------------------------------------------------------------------------------ */
 
 const characters = [
@@ -134,15 +142,19 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  for(let character of arr){
+    houses.push(character.house);
+  }
   return houses;
 };
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named hasChildrenValues that uses Object.values to determine if any given character in the data set has children.
+x - Write a function named hasChildrenValues
+x - that uses Object.values to determine if any given character in the data set has children.
 
-This function should take in an array of data and a character name and return a Boolean.
+x - This function should take in an array of data and a character name and return a Boolean.
 
 For example:
 hasChildrenValues(characters, 'Cersei') will return true
@@ -151,7 +163,10 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-
+  const selectedCharacter = arr.find(char => char.name === character);
+  if (!selectedCharacter) return false;
+  const values = Object.values(selectedCharacter);
+  return values.some(val => Array.isArray(val) && val.length > 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -252,7 +267,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return an an array of names and numbers', () => {
     const startingObj = {
       'Grace Hopper': '222-303-5938',
@@ -264,7 +279,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return an array of the names of the houses', () => {
     expect(getHouses(characters)[0]).toStrictEqual('Stark');
     expect(getHouses(characters).length).toStrictEqual(7);
@@ -272,7 +287,7 @@ xdescribe('Testing challenge 5', () => {
 });
 
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenValues(characters, 'Daenarys')).toBeTruthy();
   });
