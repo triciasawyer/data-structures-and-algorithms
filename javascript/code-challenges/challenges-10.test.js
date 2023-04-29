@@ -5,18 +5,23 @@ CHALLENGE 1 - Review
 
 x -Write a function named returnTen,
 x takes in a string
-and uses split and splice to return the last 10 characters from that string as elements of an array.
+x -and uses split and splice to return the last 10 characters from that string as elements of an array.
 
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
   // Solution code here...
+  const arr = str.split('');
+  const lastTen = arr.splice(-10);
+  return lastTen;
 }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named findMax that takes in a matrix of positive numbers and returns the number with the highest value.
+x - Write a function named findMax
+x - that takes in a matrix of positive numbers
+x - and returns the number with the highest value.
 
 For example:
 [
@@ -29,6 +34,16 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  let max = matrix[0][0];
+
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] > max) {
+        max = matrix[i][j];
+      }
+    }
+  }
+  return max;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -225,7 +240,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the max value', () => {
     expect(findMax([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(24);
   });
