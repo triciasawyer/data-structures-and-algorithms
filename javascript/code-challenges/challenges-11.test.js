@@ -28,7 +28,9 @@ function transformToLis(obj){
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named count that, given an integer and an array of arrays, uses either filter, map, or reduce to count the amount of times the integer is present in the array of arrays.
+x - Write a function named count that,
+x - given an integer and an array of arrays,
+x - uses either filter, map, or reduce to count the amount of times the integer is present in the array of arrays.
 
 Note: You might need to use the same method more than once.
 
@@ -37,6 +39,15 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  return input.reduce((acc, arr) => {
+    return acc + arr.reduce((innerAcc, num) => {
+      if (num === target) {
+        return innerAcc + 1;
+      } else {
+        return innerAcc;
+      }
+    }, 0);
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -164,7 +175,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the number of times the input is in the nested arrays', () => {
     expect(count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]])).toStrictEqual(4);
     expect(count(3, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]])).toStrictEqual(2);
