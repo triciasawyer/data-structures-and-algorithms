@@ -3,8 +3,8 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named transformToLis that,
-given an object,
+x - Write a function named transformToLis that,
+x - given an object,
 returns an array of the key value pairs as html list items.
 
 For example:
@@ -22,6 +22,7 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+  return Object.entries(obj).map(([key, value]) => `<li>${key}: ${value}</li>`);
 }
 
 /* ------------------------------------------------------------------------------------------------
