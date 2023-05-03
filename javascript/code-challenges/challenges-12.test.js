@@ -16,13 +16,16 @@ const replaceZeros = (string) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named validatePin that uses a regular expression pattern to validate a PIN.
+x - Write a function named validatePin
+x - that uses a regular expression pattern to validate a PIN.
 
 If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
   // Solution code here...
+const pattern = /^\d{4}$/;
+return pattern.test(pin);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,7 +126,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should validate a PIN of exactly four digits', () => {
     expect(validatePin(1234)).toBeTruthy();
     expect(validatePin(123)).toBeFalsy();
