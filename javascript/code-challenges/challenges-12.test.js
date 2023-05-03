@@ -64,8 +64,9 @@ const hasNumber = (string) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named validateEmail that takes in an email address and validates it based
-on several rules:
+x - Write a function named validateEmail
+x - that takes in an email address
+x - and validates it based on several rules:
   - one word, or two words separated by a period, before the @ symbol
   - can contain numbers
   - can have any of the following top-level domains: .net, .com, or .org
@@ -79,6 +80,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  const pattern = /^[a-zA-Z0-9]+([.][a-zA-Z0-9]+)?@(?!.*[:/])[a-zA-Z0-9]+.(net|com|org)$/;
+  return pattern.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -173,7 +176,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should match a basic email', () => {
     expect(validateEmail('joe@codefellows.com')).toBeTruthy();
   });
