@@ -74,26 +74,30 @@ const totalSum = (input) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named divisibleByFiveTwoToThePower
-that accepts an array of arrays as input.
+x - Write a function named divisibleByFiveTwoToThePower
+x - that accepts an array of arrays as input.
 
-This function should first remove any elements that are not numbers
-or are not divisible by five.
+x - This function should first remove any elements that are not numbers
+x - or are not divisible by five.
 
-This function should then raise 2 to the power of the resulting numbers,
-returning an array of arrays.
+x - This function should then raise 2 to the power of the resulting numbers,
+x - returning an array of arrays.
 
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  const filtered = input.map(arr => arr.filter(num => typeof num === 'number' && num % 5 === 0));
+  const result = filtered.map(arr => arr.map(num => Math.pow(2, num)));
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named findMaleAndFemale that, given the Star Wars data, below,
+Write a function named findMaleAndFemale that,
+given the Star Wars data, below,
 returns the names of the characters whose gender is either male or female.
 
 The names should be combined into a single string with each character name separated by "and".
@@ -205,7 +209,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return numbers divisible by five, then raise two to the power of the resulting numbers', () => {
     expect(divisibleByFiveTwoToThePower([[10, 20, 5, 4], [5, 6, 7, 9], [1, 10, 3]])).toStrictEqual([[1024, 1048576, 32], [32], [1024]]);
   });
@@ -219,7 +223,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return only characters that are male or female', () => {
     expect(findMaleAndFemale(starWarsData)).toStrictEqual('Luke Skywalker and Darth Vader and Leia Organa');
     expect(findMaleAndFemale([{ name: 'person', gender: 'female' }, { gender: 'lol' }, { name: 'persontwo', gender: 'male' }])).toStrictEqual('person and persontwo');
