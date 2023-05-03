@@ -96,9 +96,9 @@ const divisibleByFiveTwoToThePower = (input) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named findMaleAndFemale that,
-given the Star Wars data, below,
-returns the names of the characters whose gender is either male or female.
+x - Write a function named findMaleAndFemale that,
+x - given the Star Wars data, below,
+x - returns the names of the characters whose gender is either male or female.
 
 The names should be combined into a single string with each character name separated by "and".
 
@@ -158,6 +158,9 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  const filtered = data.filter(char => char.gender === 'male' || char.gender === 'female');
+  const names = filtered.map(char => char.name);
+  return names.join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
