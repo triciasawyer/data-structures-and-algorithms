@@ -87,7 +87,8 @@ const validateEmail = (email) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named validatePhoneNumber that accepts a phone number and determines if it is valid.
+x - Write a function named validatePhoneNumber
+that accepts a phone number and determines if it is valid.
 
 Acceptable formats include:
  - (555) 555-5555
@@ -107,6 +108,9 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  const pattern = /^(\(\d{3}\)\s?\d{3}-\d{4}|\(\d{3}\)\d{3}\s\d{4}|\d{3}\s?\d{3}-\d{4}|\d{3}-\d{7}|\d{3}-\d{3}\s\d{4}|\d{3}-\d{3}-\d{4}|\d{3}\s?\d{3}\s?\d{4}|\d{6}-\d{4}|\d{10})$/;
+  return pattern.test(phoneNumber);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -207,7 +211,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should match the acceptable phone number formats', () => {
     expect(validatePhoneNumber('(555) 555-5555')).toBeTruthy();
     expect(validatePhoneNumber('555 555-5555')).toBeTruthy();
