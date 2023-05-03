@@ -31,13 +31,17 @@ return pattern.test(pin);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named validateWord that uses a regular expression pattern to validate that a word is between 5 and 10 characters long.
+x - Write a function named validateWord
+x - that uses a regular expression pattern to validate that a word is between 5 and 10 characters long.
 
-If the word is between 5 and 10 characters long, return true. Otherwise, return false.
+If the word is between 5 and 10 characters long, return true.
+Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validateWord = (word) => {
   // Solution code here...
+  const pattern = /^[a-zA-Z]{5,10}$/;
+  return pattern.test(word);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -139,7 +143,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should validate a word between 5 and 10 characters', () => {
     expect(validateWord('Hello')).toBeTruthy();
     expect(validateWord('Bob')).toBeFalsy();
