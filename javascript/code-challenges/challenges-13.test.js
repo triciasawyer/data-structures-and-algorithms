@@ -25,13 +25,20 @@ const longestString = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named firstLetters that takes in an array of strings and returns an array containing only the first letter of each string.
+x -Write a function named firstLetters
+x -that takes in an array of strings
+x -and returns an array containing only the first letter of each string.
 
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 'w', 'w', ':']
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
   // Solution code here...
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr[i][0]);
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -178,7 +185,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the first letter of each element of the array', () => {
     const words = ['apple', 'banana', 'cantaloupe'];
 
