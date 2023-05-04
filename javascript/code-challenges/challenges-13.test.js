@@ -79,7 +79,7 @@ const standardizePhoneNumbers = (arr) => {
     const phoneNumber = arr[i].replace(/\D/g, '');
     result.push(phoneNumber);
   }
-return result;
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,11 +104,19 @@ const onlyOddChars = (str) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
+x - Write a function named allHappy
+x - that takes in an array of strings
+x - and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
   // Solution code here...
+  for (let i = 0; i < arr.length; i++) {
+    if (!arr[i].includes(':)')) {
+      return false;
+    }
+  }
+  return true;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -248,7 +256,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should correctly assess whether all the strings are happy', () => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
