@@ -85,13 +85,20 @@ return result;
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named onlyOddChars that takes in a string and returns only the odd-index characters from that string.
+x - Write a function named onlyOddChars
+x - that takes in a string
+x - and returns only the odd-index characters from that string.
 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let result = '';
+  for (let i = 1; i < str.length; i += 2) {
+    result += str[i];
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -232,7 +239,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should only return the odd indexed characters from the string', () => {
     expect(onlyOddChars('0123456789')).toStrictEqual('13579');
     expect(onlyOddChars('abcd')).toStrictEqual('bd');
