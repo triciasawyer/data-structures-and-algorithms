@@ -44,13 +44,22 @@ const firstLetters = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named findHappiness that takes in an array of strings and returns an array containing only the strings from the input array that contain ":)".
+x -Write a function named findHappiness
+x -that takes in an array of strings
+and returns an array containing only the strings from the input array that contain ":)".
 
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this is great :)', ':)))))']
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
   // Solution code here...
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].includes(':)')) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -195,7 +204,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return only the strings that contain smiley faces', () => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
