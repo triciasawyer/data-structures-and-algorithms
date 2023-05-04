@@ -46,7 +46,7 @@ CHALLENGE 3
 
 x -Write a function named findHappiness
 x -that takes in an array of strings
-and returns an array containing only the strings from the input array that contain ":)".
+x -and returns an array containing only the strings from the input array that contain ":)".
 
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this is great :)', ':)))))']
 ------------------------------------------------------------------------------------------------ */
