@@ -112,8 +112,10 @@ let biggerThanLuke = (arr) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-Write a function named sortBy that takes in an array of objects,
-each of which has a particular property, and sorts those objects by that property, lowest to highest, returning the same array.
+x - Write a function named sortBy that takes in an array of objects,
+x - each of which has a particular property,
+x - and sorts those objects by that property, lowest to highest,
+x - returning the same array.
 
 Here is an example of the input:
 [
@@ -127,6 +129,7 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
+  return arr.sort((val1, val2) => val1[property] > val2[property] ? 1 : -1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -202,7 +205,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should sort items by a price', () => {
 
     expect(sortBy('price', [
