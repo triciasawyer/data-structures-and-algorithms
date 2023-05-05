@@ -5,17 +5,16 @@ CHALLENGE 1 - Review
 
 x - Write a function named screenForNames
 x - that takes in an array of strings
-x - and uses Regex to create a new array of only those strings that match the following rules:
+x - and uses Regex to create a new array of only those strings
+that match the following rules:
 
 * the name must begin with Mr., Mrs., Ms., Dr. followed by a space
 * the name must contain only letter characters (white spaces are ok)
 
 ------------------------------------------------------------------------------------------------ */
 
-const screenForNames = (arr) => {
-  const nameRegex = /^(Mr\.|Mrs\.|Ms\.|Dr\.)\s[A-Za-z\s]+$/;
-  return arr.filter((name) => nameRegex.test(name));
-};
+const screenForNames = (arr) => arr.filter(name => /^((Mr.)|(Mrs.)|(Ms.)|(Dr.))\s\w+$/.test(name));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
