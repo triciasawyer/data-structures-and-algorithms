@@ -146,12 +146,16 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
   // Solution code here...
+  return /https:\/\//i.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named detectTicTacToeWin that accepts a two-dimensional array of strings. Each string is guaranteed to be either "X", "O" or an empty string. Your function should check to see if any row, column, or either diagonal direction has three matching "X" or "O" symbols (non-empty strings), three-in-a-line.
+Write a function named detectTicTacToeWin
+that accepts a two-dimensional array of strings.
+Each string is guaranteed to be either "X", "O" or an empty string.
+Your function should check to see if any row, column, or either diagonal direction has three matching "X" or "O" symbols (non-empty strings), three-in-a-line.
 
 This function should return either true or false to indicate if someone won the game.
 
@@ -169,7 +173,25 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  let gameWon = false;
+  for (let i = 0; i < 3; i++) {
+    gameWon = isWin([board[i][0],board[i][1], board[i][2]].join(''), gameWon);
+    gameWon = isWin([board[0][i],board[1][i], board[2][i]].join(''), gameWon);
+  }
+    gameWon = isWin([board[0][0],board[1][1], board[2][2]].join(''), gameWon);
+    gameWon = isWin([board[0][2],board[1][1], board[2][0]].join(''), gameWon);
+    return gameWon;
 };
+
+function isWin (str, gameWon) {
+  if (gameWon) {
+    return true;
+  } else if (str === 'XXX' || str === 'OOO') {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -234,7 +256,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should check if url is https', () => {
 
     expect(isSecure('http://www.insecure.com')).toBe(false);
@@ -243,7 +265,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return true if there are three in a row', () => {
     expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
     expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
