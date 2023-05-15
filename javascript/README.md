@@ -46,7 +46,11 @@ Each type of code challenge has slightly different instructions. Please refer to
     - i.e. `__tests__/linked-list.test.js`
     - Add to the tests written for this data structure to cover your new method(s)
 
-### Code Challenge / Algorithm
+### Code Challenge / Algorithm TOC
+
+-[code challenge 1](401-code-challenges/)
+-[code challenge 2](401-code-challenges/)
+-[code challenge 3](401-code-challenges/)
 
 Code challenges should be completed within a folder named `code-challenges` under the `javascript` level
 
@@ -80,6 +84,6 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - **Run a test for a data structure** - `npm test linked-list`
 - **Run a test for a specific challenge** - `npm test reverse-ll`
 
-#### Live Tests
+### Live Tests
 
 Note that when you check your code into GitHub, all of your tests will automatically execute. These results should match your own, and will be found on the  **Actions** tab
