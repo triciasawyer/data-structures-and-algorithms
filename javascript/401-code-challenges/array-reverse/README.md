@@ -2,4 +2,4 @@
 
 (Just whiteboard)
 
-![Code Challenge 1 - Whiteboard](/whiteboard-img/whiteboard1.png)
+![Code Challenge 1 - Whiteboard](/401-code-challenges/whiteboard-images/whiteboard1.png)
