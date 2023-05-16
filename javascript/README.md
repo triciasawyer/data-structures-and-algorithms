@@ -89,3 +89,4 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 ### 401 data structures/Code challenges
 
 - [array reverse](../javascript/401-code-challenges/array-reverse/)
+- [array insert shift](../javascript/401-code-challenges/array-insert-shift/)
