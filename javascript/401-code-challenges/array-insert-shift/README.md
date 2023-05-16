@@ -6,8 +6,10 @@ Write a function called insertShiftArray which takes in an array and a value to 
 
 ## Whiteboard process
 
-![Code Challenge 2](../whiteboard-images/)
+![Code Challenge 2](../whiteboard-images/whiteboard2.png)
 
 ## Approach and Efficiency
 
 Modified array in place
+
+Assigned partner wasn't available, collaborated with Tim and Emmanuel on this whiteboard.
