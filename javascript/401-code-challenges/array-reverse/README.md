@@ -6,7 +6,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 ## Whiteboard process
 
-![Code Challenge 1 - Whiteboard](../whiteboard-images/whiteboard1.png)
+![Code Challenge 1](../whiteboard-images/whiteboard1.png)
 
 ## Approach and Efficiency
 
