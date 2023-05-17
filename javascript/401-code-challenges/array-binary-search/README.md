@@ -10,8 +10,6 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ## Approach and Efficiency
 
-Modified array in place
-
 ## Collaborators
 
 Josh and I worked together to complete this code challenge
