@@ -1,4 +1,4 @@
-# Code challenge 1
+# Code challenge 2
 
 ## Challenge Title
 
