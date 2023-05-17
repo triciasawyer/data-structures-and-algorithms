@@ -90,3 +90,4 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 
 - [array reverse](../javascript/401-code-challenges/array-reverse/)
 - [array insert shift](../javascript/401-code-challenges/array-insert-shift/)
+- [array binary search](../javascript//401-code-challenges//array-binary-search/)
