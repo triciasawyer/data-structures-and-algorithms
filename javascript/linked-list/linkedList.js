@@ -32,7 +32,6 @@ class Node {
 
         // next is now null, reassign new node
         current.next = node
-
       }
 
 
@@ -45,14 +44,12 @@ class Node {
           current = current.next
         }
       }
-
     }
   }
 }
 
 
 let list = new LinkedList
-  ();
 console.log('empty list', list);
 
 // adding head to list
