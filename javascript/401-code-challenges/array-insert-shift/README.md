@@ -12,4 +12,8 @@ Write a function called insertShiftArray which takes in an array and a value to 
 
 Modified array in place
 
+## Collaborators
+
 Assigned partner wasn't available, collaborated with Tim and Emmanuel on this whiteboard.
+
+## Solution

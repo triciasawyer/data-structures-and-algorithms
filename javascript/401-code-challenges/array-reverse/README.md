@@ -11,3 +11,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 ## Approach and Efficiency
 
 Modified array in place
+
+## Collaborators
+
+## Solution
