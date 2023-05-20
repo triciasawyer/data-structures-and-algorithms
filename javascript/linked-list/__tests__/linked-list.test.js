@@ -4,7 +4,7 @@
 const LinkedList = require('../index');
 
 describe('Linked List', () => {
-  it('works', () => {
+  it('Connnected', () => {
     expect(true).toBeTruthy();
   });
 });
