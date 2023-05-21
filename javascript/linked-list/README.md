@@ -1,14 +1,16 @@
 # code challenge 5
 
 ## Challenge Title
-<!-- Description of the challenge -->
+
+ Linekd list. Creating classes to manipulate a linked list with nodes.
 
 ## Whiteboard Process
 
 Not needed for this challenge
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+I researched a lot and rewatched class clecture to better understand node, as this was a new concept.
 
 ## Collaboration
 
