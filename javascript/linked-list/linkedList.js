@@ -2,64 +2,63 @@
 
 
 class Node {
-  constructor(value) {
+  constructor(value){
     this.value = value;
     this.next = null;
-
-
-    class LinkedList {
-      constructor() {
-        this.head = null;
-      }
-
-      // add node to the end
-      add(value) {
-        // create a new node
-        const node = new Node(value);
-
-        //assign node to the head, if no head, assign new node to head property
-        if (!this.head) {
-          this.head = node;
-          return;
-        }
-        // transversing the linked list, add new node to end
-        let current = this.head;
-
-        // current.next, null will reassign new node
-        while (current.next) {
-          current = current.next
-        }
-
-        // next is now null, reassign new node
-        current.next = node
-      }
-
-
-      // always transverse from head
-      traverse() {
-        let current = this.head;
-        while (current) {
-          // when transversing, console.log it
-          console.log(current.value)
-          current = current.next
-        }
-      }
-    }
   }
 }
 
+class LinkedList {
+  constructor(){
+    this.head = null;
+  }
 
-let list = new LinkedList
-console.log('empty list', list);
+  // adds a node to the FRONT of a linked list
+  insert(value){
+    let node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+  }
 
-// adding head to list
-list.add(1);
-list.add(2);
-list.add(3);
-list.add(4);
-list.add(5);
+  // adds a node to the END of a linked list
+  append(value){
+    let node = new Node(value);
+    // if the head is null, we need to assign this new to the head as well
+    if(!this.head){
+      // in other words, if the list was empty, do this and done
+      this.head = node;
+      return
+    }
+    let current = this.head
+    while(current.next){
+      current = current.next;
+    }
+    current.next = node;
+
+  }
+
+  // iteratively traverse linked list and do a thing
+  traversal(){
+    let current = this.head;
+
+    while(current){
+      // do the thing
+      console.log(current.value);
+      current = current.next;
+    }
+  }
+
+}
+
+let list  = new LinkedList();
+list.append('a');
+list.append('b');
+list.append('c');
+list.append('d');
+
+console.log(JSON.stringify(list));
 
 
-console.log('populated list', list);
-list.traverse();
+
+module.exports = LinkedList
 
