@@ -61,17 +61,6 @@ class LinkedList {
   }
 
 
-  // iteratively traverse linked list and do a thing
-  traversal(){
-    let current = this.head;
-
-    while(current){
-      console.log(current.value);
-      current = current.next;
-    }
-  }
-
-
 }
 
 module.exports = LinkedList;
