@@ -95,6 +95,14 @@ class LinkedList {
     }
   }
 
+// Streth goal: delete a node with the given value
+  delete(value) {
+    let current = this.head;
+    while (current.next) {
+      if (current.next.value === value) current.next = current.next.next;
+      current = current.next;
+    }
+  }
 
 }
 
