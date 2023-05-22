@@ -47,18 +47,54 @@ class LinkedList {
 
 
   // //  Add new node to the end of a linked list
-//   append(value) {
-//     let newNode = new Node(value);
-//     if (!this.head) {
-//       this.head = newNode;
-//       return
-//     }
-//     let current = this.head;
-//     while (current.next) {
-//       current = current.next;
-//     }
-//     current.next = newNode;
-//   }
+  append(value) {
+    let newNode = new Node(value);
+    if (!this.head) {
+      this.head = newNode;
+      return
+    }
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = newNode;
+  }
+
+
+// Add new node before the first node that has the value
+  insertBefore(value, newValue) {
+    let newNode = new Node(newValue);
+    if (this.head.value === value) {
+      newNode.next = this.head;
+      this.head = newNode;
+      return;
+    }
+    let current = this.head;
+    while (current.next) {
+      if (current.next.value === value) {
+        newNode.next = current.next;
+        current.next = newNode;
+        return;
+      }
+      current = current.next;
+    }
+  }
+
+
+// Add new node after the first node that has the value
+  insertAfter(value, newValue) {
+    let newNode = new Node(newValue);
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        newNode.next = current.next;
+        current.next = newNode;
+        return;
+      }
+      current = current.next;
+    }
+  }
+
 
 }
 
