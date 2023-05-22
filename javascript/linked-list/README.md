@@ -6,7 +6,7 @@
 
 ## Whiteboard Process
 
-Not needed for this challenge
+[code challenge 6](../401-code-challenges/whiteboard-images/whiteboard6.png)
 
 ## Approach & Efficiency
 
@@ -43,6 +43,8 @@ time = O(n)
 space = O(1)
 
 ## Collaboration
+
+Worked with Kao on this
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
