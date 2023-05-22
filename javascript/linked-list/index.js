@@ -51,7 +51,7 @@ class LinkedList {
     let newNode = new Node(value);
     if (!this.head) {
       this.head = newNode;
-      return
+      return;
     }
     let current = this.head;
     while (current.next) {
