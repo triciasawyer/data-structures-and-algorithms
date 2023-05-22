@@ -59,8 +59,6 @@ class LinkedList {
     result += ' -> NULL';
     return result;
   }
-
-
 }
 
 module.exports = LinkedList;

@@ -33,6 +33,7 @@ describe('Linked List', () => {
     let list = new LinkedList();
     list.insert(1);
     list.insert(2);
+
     expect(list.head.value).toEqual(2);
     expect(list.head.next.value).toEqual(1);
   });
@@ -42,6 +43,7 @@ describe('Linked List', () => {
     let list = new LinkedList();
     list.insert(1);
     list.insert(2);
+
     expect(list.includes(2)).toBeTruthy();
   });
 
@@ -50,6 +52,7 @@ describe('Linked List', () => {
     let list = new LinkedList();
     list.insert(1);
     list.insert(2);
+
     expect(list.includes(3)).toBeFalsy();
   });
 
@@ -59,6 +62,7 @@ describe('Linked List', () => {
     list.insert('{ c }');
     list.insert('{ b }');
     list.insert('{ a }');
+    
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
   });
 });
