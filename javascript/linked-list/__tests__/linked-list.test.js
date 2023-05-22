@@ -31,27 +31,27 @@ describe('Linked List', () => {
 
     test('Can properly insert multiple nodes into the linked list', () => {
     let list = new LinkedList();
-    list.insert(1);
     list.insert(2);
+    list.insert(1);
 
-    expect(list.head.value).toEqual(2);
-    expect(list.head.next.value).toEqual(1);
+    expect(list.head.value).toEqual(1);
+    expect(list.head.next.value).toEqual(2);
   });
 
 
   test('Will return true when finding a value within the linked list that exists', () => {
     let list = new LinkedList();
-    list.insert(1);
     list.insert(2);
+    list.insert(1);
 
-    expect(list.includes(2)).toBeTruthy();
+    expect(list.includes(1)).toBeTruthy();
   });
 
 
   test('Will return false when searching for a value in the linked list that does not exist', () => {
     let list = new LinkedList();
-    list.insert(1);
     list.insert(2);
+    list.insert(1);
 
     expect(list.includes(3)).toBeFalsy();
   });
@@ -62,7 +62,7 @@ describe('Linked List', () => {
     list.insert('{ c }');
     list.insert('{ b }');
     list.insert('{ a }');
-    
+
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
   });
 });
