@@ -22,21 +22,6 @@ class LinkedList {
   }
 
 
-//  Add new node to the end of a linked list
-  append(value) {
-    let newNode = new Node(value);
-    if (!this.head) {
-      this.head = newNode;
-      return
-    }
-    let current = this.head;
-    while (current.next) {
-      current = current.next;
-    }
-    current.next = newNode;
-  }
-
-
 //  Checks if list contains the search value
   includes(value) {
     let current = this.head;
@@ -59,13 +44,23 @@ class LinkedList {
     result += ' -> NULL';
     return result;
   }
+
+
+  // //  Add new node to the end of a linked list
+//   append(value) {
+//     let newNode = new Node(value);
+//     if (!this.head) {
+//       this.head = newNode;
+//       return
+//     }
+//     let current = this.head;
+//     while (current.next) {
+//       current = current.next;
+//     }
+//     current.next = newNode;
+//   }
+
 }
 
-let list = new LinkedList();
-list.append('a');
-list.append('b');
-list.append('c');
-list.append('d');
-console.log(JSON.stringify(list));
 
 module.exports = LinkedList;
