@@ -88,6 +88,8 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 
 ### 401 data structures/Code challenges
 
-- [array reverse](../javascript/401-code-challenges/array-reverse/)
-- [array insert shift](../javascript/401-code-challenges/array-insert-shift/)
-- [array binary search](../javascript//401-code-challenges//array-binary-search/)
+- [code challenge 1 - array reverse](../javascript/401-code-challenges/array-reverse/)
+- [code challenge 2 - array insert shift](../javascript/401-code-challenges/array-insert-shift/)
+- [code challenge 3 - array binary search](../javascript//401-code-challenges//array-binary-search/)
+- [code challenge 4 - Mock interview]
+- [code challenge 5 - linked list](../javascript//linked-list)

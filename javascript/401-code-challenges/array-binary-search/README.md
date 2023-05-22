@@ -17,3 +17,5 @@ With my algorithm, the while loop runs only once because the key is found at the
 ## Collaborators
 
 Josh and I worked together to complete this code challenge
+
+## Solution
