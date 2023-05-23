@@ -6,13 +6,44 @@
 
 ## Whiteboard Process
 
-Not needed for this challenge
+[code challenge 6](../401-code-challenges/whiteboard-images/whiteboard6.png)
 
 ## Approach & Efficiency
 
 I researched a lot and rewatched class clecture to better understand node, as this was a new concept.
 
+My BigO:
+
+insert
+time = O(1)
+space = O(n)
+
+includes
+time = O(n)
+space = O(1)
+
+toString
+time = O(n)
+space = O(n)
+
+append
+time = O(n)
+space = O(n)
+
+insertBefore
+time = O(n)
+space = O(n)
+
+insertAfter
+time = O(n)
+space = O(n)
+
+delete
+time = O(n)
+space = O(1)
+
 ## Collaboration
 
+Worked with Kao on this
+
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->

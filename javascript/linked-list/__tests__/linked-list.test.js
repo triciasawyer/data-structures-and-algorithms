@@ -65,5 +65,77 @@ describe('Linked List', () => {
 
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
   });
+
+
+  test('Can successfully add a node to the end of the linked list', () => {
+    let newList = new LinkedList();
+    newList.insert('{ a }');
+    newList.insert('{ b }');
+    newList.append('{ c }');
+
+    expect(newList.toString()).toEqual('{ b } -> { a } -> { c } -> NULL');
+  });
+
+
+  test('Can successfully add multiple nodes to the end of a linked list', () => {
+    let newList = new LinkedList();
+    newList.append('{ a }');
+    newList.append('{ b }');
+    newList.append('{ c }');
+
+    expect(newList.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
+  });
+
+
+  test('Can successfully insert a node before a node located in the middle of a linked list', () => {
+    let newList = new LinkedList();
+    newList.append('{ a }');
+    newList.append('{ b }');
+    newList.insertBefore('{ b }','{ c }');
+
+    expect(newList.toString()).toEqual('{ a } -> { c } -> { b } -> NULL');
+  });
+
+
+  test('Can successfully insert a node before the first node of a linked list', () => {
+    let newList = new LinkedList();
+    newList.append('{ a }');
+    newList.append('{ b }');
+    newList.insertBefore('{ a }','{ c }');
+
+    expect(newList.toString()).toEqual('{ c } -> { a } -> { b } -> NULL');
+  });
+
+
+  test('Can successfully insert after a node in the middle of the linked list', () => {
+    let newList = new LinkedList();
+    newList.append('{ a }');
+    newList.append('{ b }');
+    newList.insertAfter('{ a }','{ c }');
+
+    expect(newList.toString()).toEqual('{ a } -> { c } -> { b } -> NULL');
+  });
+
+
+  test('Can successfully insert a node after the last node of the linked list', () => {
+    let newList = new LinkedList();
+    newList.append('{ a }');
+    newList.append('{ b }');
+    newList.insertAfter('{ b }','{ c }');
+
+    expect(newList.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
+  });
+
+  test('Delete a node with the given value from the linked list.',()=>{
+    let newList = new LinkedList();
+    newList.append('{ a }');
+    newList.append('{ b }');
+    newList.append('{ c }');
+    expect(newList.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
+
+    newList.delete('{ b }');
+    
+    expect(newList.toString()).toEqual('{ a } -> { c } -> NULL');
+  });
 });
 
