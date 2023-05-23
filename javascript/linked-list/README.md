@@ -47,4 +47,3 @@ space = O(1)
 Worked with Kao on this
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
