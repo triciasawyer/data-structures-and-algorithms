@@ -1,7 +1,7 @@
 'use strict';
 
 
-const LinkedList = require('../index');
+const { LinkedList } = require('../index');
 
 
 describe('Linked List method kthFromEnd', () => {
@@ -57,8 +57,8 @@ test('"Happy Path” where k is not at the end, but somewhere in the middle of t
   newList.insert(2);
   newList.insert(3);
   newList.insert(4);
-
-  expect(true).toBeTruthy();
+  let fromEnd = newList.kthFromEnd(3);
+  expect(fromEnd).toEqual(2);
 });
 
 

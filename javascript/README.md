@@ -46,11 +46,7 @@ Each type of code challenge has slightly different instructions. Please refer to
     - i.e. `__tests__/linked-list.test.js`
     - Add to the tests written for this data structure to cover your new method(s)
 
-### Code Challenge / Algorithm TOC
-
--[code challenge 1](401-code-challenges/)
--[code challenge 2](401-code-challenges/)
--[code challenge 3](401-code-challenges/)
+### Code Challenge / Algorithm
 
 Code challenges should be completed within a folder named `code-challenges` under the `javascript` level
 
@@ -86,10 +82,16 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 
 ### Live Tests
 
-### 401 data structures/Code challenges
+- [code challenge 5,6 - linked list tests](../javascript/linked-list/__tests__/linked-list.test.js)
+- [code challenge 7 - linked list kth tests](../javascript/linked-list/__tests__/linked-list-kth.test.js)
+- [code challenge 8 - linked list zip tests](../javascript/linked-list/__tests__/linked-list-zip.test.js)
+
+### Code challenges TOC
 
 - [code challenge 1 - array reverse](../javascript/401-code-challenges/array-reverse)
 - [code challenge 2 - array insert shift](../javascript/401-code-challenges/array-insert-shift)
 - [code challenge 3 - array binary search](../javascript/401-code-challenges/array-binary-search)
 - [code challenge 4 - Mock interview]
-- [code challenge 5,6,7 - linked list](../javascript/linked-list)
+- [code challenge 5,6 - linked list](../javascript/linked-list/index.js)
+- [code challenge 7](../javascript/linked-list/index.js)
+- [code challenge 8 - linked list zip](../javascript/linked-list/index.js)
