@@ -17,40 +17,49 @@ I researched a lot and rewatched class clecture to better understand node, as th
 My BigO:
 
 insert
-time = O(1)
-space = O(n)
+time: O(1)
+space: O(n)
 
 includes
-time = O(n)
-space = O(1)
+time: O(n)
+space: O(1)
 
 toString
-time = O(n)
-space = O(n)
+time: O(n)
+space: O(n)
 
 append
-time = O(n)
-space = O(n)
+time: O(n)
+space: O(n)
 
 insertBefore
-time = O(n)
-space = O(n)
+time: O(n)
+space: O(n)
 
 insertAfter
-time = O(n)
-space = O(n)
+time: O(n)
+space: O(n)
 
 delete
-time = O(n)
-space = O(1)
+time: O(n)
+space: O(1)
 
 kthFromEnd
-time = O(n)
-space = O(1)
+time: O(n)
+space: O(1)
+
+ZipLists
+time: O(n)
+space: O(1)
+
+ZipSort
+time: O(n)
+space: O(1)
 
 ## Collaboration
 
 - Worked with Kao on code challenge 6
 - Unavailable to collab on code challenge 7
+- Worked with
 
 ## Solution
