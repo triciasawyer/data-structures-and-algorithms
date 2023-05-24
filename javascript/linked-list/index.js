@@ -104,6 +104,28 @@ class LinkedList {
     }
   }
 
+
+  kthFromEnd(k) {
+    if (k < 1) {
+      return 'Exception';
+    }
+    let slow = this.head;
+    let fast = this.head;
+
+    for (let i = 0; i < k; i++) {
+      if (fast === null) {
+        return 'Exception';
+      }
+      fast = fast.next;
+    }
+
+    while (fast !== null) {
+      slow = slow.next;
+      fast = fast.next;
+    }
+
+    return slow.value;
+  }
 }
 
 

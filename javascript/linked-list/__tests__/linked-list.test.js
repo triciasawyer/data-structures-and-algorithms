@@ -134,8 +134,11 @@ describe('Linked List', () => {
     expect(newList.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
 
     newList.delete('{ b }');
-    
+
     expect(newList.toString()).toEqual('{ a } -> { c } -> NULL');
   });
+
+
 });
+
 
