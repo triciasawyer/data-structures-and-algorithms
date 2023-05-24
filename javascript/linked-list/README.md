@@ -3,7 +3,8 @@
 ## Challenge Title
 
 Code challenge 6 - Linked list. Creating classes (append, insertBefore, insertAfter, delete) to manipulate a linked list with nodes.
-Code challenge 7 - Created class kth from end.
+Code challenge 7 - Created class kth from end with tests.
+Code challenge 8 - Created Zip class with tests.
 
 ## Whiteboard Process
 
