@@ -86,6 +86,10 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 
 ### Live Tests
 
+- [code challenge 5,6 - linked list tests](../javascript/linked-list/__tests__/linked-list.test.js)
+- [code challenge 7 - linked list kth tests](../javascript/linked-list/__tests__/linked-list-kth.test.js)
+- [code challenge 8 - linked list zip tests](../javascript/linked-list/__tests__/linked-list-zip.test.js)
+
 ### 401 data structures/Code challenges
 
 - [code challenge 1 - array reverse](../javascript/401-code-challenges/array-reverse)
