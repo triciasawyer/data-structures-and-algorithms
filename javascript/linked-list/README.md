@@ -10,6 +10,7 @@ Code challenge 8 - Created Zip class with tests.
 
 [code challenge 6](../401-code-challenges/whiteboard-images/whiteboard6.png)
 [code challenge 7](../401-code-challenges//whiteboard-images/whiteboard7.png)
+[code challenge 8](../401-code-challenges/whiteboard-images/whiteboard8.png)
 
 ## Approach & Efficiency
 
@@ -61,6 +62,6 @@ space: O(1)
 
 - Worked with Kao on code challenge 6
 - Unavailable to collab on code challenge 7
-- Worked with
+- Worked with Ike on code challenge 8
 
 ## Solution
