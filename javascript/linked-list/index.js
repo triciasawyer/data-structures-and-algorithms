@@ -126,7 +126,7 @@ class LinkedList {
 
     return slow.value;
   }
-  
+
 }
 
 
