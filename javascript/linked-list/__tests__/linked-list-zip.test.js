@@ -1,7 +1,7 @@
 'use strict';
 
 // Require our linked list implementations
-const { LinkedList, zipLists } = require('../index');
+const { LinkedList, zipLists, sortedLinkedList } = require('../index');
 
 
 describe('Linked list', () => {
@@ -70,6 +70,44 @@ let list1 = new LinkedList();
   expect(list1.toString()).toEqual('1 -> 2 -> 3 -> NULL');
   expect(zipLists(list1, list2).toString()).toEqual('1 -> 2 -> 3 -> NULL');
 });
+
+
+// stretch goal
+test('Can merge two sorted lists', () => {
+  let list1 = new LinkedList();
+  list1.append(1);
+  list1.append(3);
+  list1.append(5);
+
+  let list2 = new LinkedList();
+  list2.append(2);
+  list2.append(4);
+  list2.append(6);
+
+  expect(list1.toString()).toEqual('1 -> 3 -> 5 -> NULL');
+  expect(list2.toString()).toEqual('2 -> 4 -> 6 -> NULL');
+  expect(sortedLinkedList(list1, list2).toString()).toEqual('1 -> 2 -> 3 -> 4 -> 5 -> 6 -> NULL');
+});
+
+
+test('list1 sorted linked list is longer than list2', () => {
+  let list1 = new LinkedList();
+  list1.append(1);
+  list1.append(2);
+  list1.append(3);
+  list1.append(4);
+
+
+  let list2 = new LinkedList();
+  list2.append(1);
+  list2.append(2);
+  list2.append(3);
+
+  expect(list1.toString()).toEqual('1 -> 2 -> 3 -> 4 -> NULL');
+  expect(list2.toString()).toEqual('1 -> 2 -> 3 -> NULL');
+  expect(sortedLinkedList(list1, list2).toString()).toEqual('1 -> 1 -> 2 -> 2 -> 3 -> 3 -> 4 -> NULL');
+});
+
 
 
 });
