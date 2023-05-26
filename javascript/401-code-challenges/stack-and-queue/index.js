@@ -7,3 +7,19 @@ class Node {
     this.next = null;
   }
 }
+
+
+class Stack {
+  constructor(){
+    this.top = null;
+  }
+
+  push(value){
+    let newNode = new Node(value);
+    newNode.next = this.top;
+    this.top = newNode;
+  }
+}
+
+
+module.exports = { Stack };
