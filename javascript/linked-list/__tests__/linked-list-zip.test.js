@@ -97,7 +97,6 @@ test('list1 sorted linked list is longer than list2', () => {
   list1.append(3);
   list1.append(4);
 
-
   let list2 = new LinkedList();
   list2.append(1);
   list2.append(2);
@@ -108,6 +107,23 @@ test('list1 sorted linked list is longer than list2', () => {
   expect(sortedLinkedList(list1, list2).toString()).toEqual('1 -> 1 -> 2 -> 2 -> 3 -> 3 -> 4 -> NULL');
 });
 
+
+test('list2 sorted linked list is longer than list1', () => {
+  let list1 = new LinkedList();
+  list1.append(1);
+  list1.append(2);
+  list1.append(3);
+
+  let list2 = new LinkedList();
+  list2.append(1);
+  list2.append(2);
+  list2.append(3);
+  list2.append(4);
+
+  expect(list1.toString()).toEqual('1 -> 2 -> 3 -> NULL');
+  expect(list2.toString()).toEqual('1 -> 2 -> 3 -> 4 -> NULL');
+  expect(sortedLinkedList(list1, list2).toString()).toEqual('1 -> 1 -> 2 -> 2 -> 3 -> 3 -> 4 -> NULL');
+});
 
 
 });
