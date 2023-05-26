@@ -127,8 +127,9 @@ class LinkedList {
     return slow.value;
   }
 
+}
 
-  zipLists(list1, list2) {
+  let zipLists = (list1, list2) => {
     const newList = new LinkedList();
 
     let current1 = list1.head;
@@ -145,11 +146,10 @@ class LinkedList {
         current2 = current2.next;
       }
     }
-
     return newList;
-  }
-
-}
+  };
 
 
-module.exports = { LinkedList };
+
+
+module.exports = { LinkedList, zipLists };
