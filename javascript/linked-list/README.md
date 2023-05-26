@@ -52,11 +52,11 @@ space: O(1)
 
 ZipLists
 time: O(n)
-space: O(1)
+space: O(n)
 
 ZipSort
 time: O(n)
-space: O(1)
+space: O(n)
 
 ## Collaboration
 
