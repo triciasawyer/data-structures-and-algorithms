@@ -129,57 +129,58 @@ class LinkedList {
 
 }
 
+  let zipLists = (list1, list2) => {
+    const newList = new LinkedList();
 
-let ZipLists = (list1, list2) => {
-  let current1 = list1.head;
-  let current2 = list2.head;
-  let newList = new LinkedList();
-  newList.head = current1 || current2;
+    let current1 = list1.head;
+    let current2 = list2.head;
 
-  let temp;
-  while (current1 || current2) {
-    if (current1) {
-      temp = current1.next;
-      if (current2) current1.next = current2;
-      current1 = temp;
+    while (current1 || current2) {
+      if (current1) {
+        newList.append(current1.value);
+        current1 = current1.next;
+      }
+
+      if (current2) {
+        newList.append(current2.value);
+        current2 = current2.next;
+      }
     }
-    if (current2) {
-      temp = current2.next;
-      if (current1) current2.next = current1;
-      current2 = temp;
+    return newList;
+  };
+
+
+// stretch goal
+  let sortedLinkedList = (list1, list2) => {
+    const mergedList = new LinkedList();
+    let current1 = list1.head;
+    let current2 = list2.head;
+
+    while (current1 && current2) {
+      if (current1.value < current2.value) {
+        mergedList.append(current1.value);
+        current1 = current1.next;
+      } else {
+        mergedList.append(current2.value);
+        current2 = current2.next;
+      }
     }
-  }
-  return newList;
-};
 
-
-let ZipSort = (list1, list2) => {
-  let current1 = list1.head;
-  let current2 = list2.head;
-  let newList = new LinkedList();
-  if (current1?.value <= current2?.value || !current2) {
-    newList.head = current1;
-    current1 = current1.next;
-  } else if (current2?.value <= current1?.value || !current1){
-    newList.head = current2;
-    current2 = current2.next;
-  }
-  let currentResult = newList.head;
-
-  while (current1 || current2) {
-    while (current1 && (current1?.value <= current2?.value || !current2)) {
-      currentResult.next = current1;
-      currentResult = currentResult.next;
+    while (current1) {
+      mergedList.append(current1.value);
       current1 = current1.next;
     }
-    while (current2 && (current2?.value <= current1?.value || !current1)) {
-      currentResult.next = current2;
-      currentResult = currentResult.next;
+
+    while (current2) {
+      mergedList.append(current2.value);
       current2 = current2.next;
     }
-  }
-  return newList;
-};
+
+    return mergedList;
+  };
 
 
-module.exports = { LinkedList, ZipLists, ZipSort };
+
+
+
+module.exports = { LinkedList, zipLists, sortedLinkedList };
