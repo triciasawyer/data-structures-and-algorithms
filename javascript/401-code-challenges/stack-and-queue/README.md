@@ -2,7 +2,7 @@
 
 ## Challenge Title
 
-Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
+Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue.
 
 ## Whiteboard process
 
@@ -10,11 +10,8 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 ## Approach and Efficiency
 
-Modified array in place
-
 ## Collaborators
 
 Worked on this with Ryan in lecture.
 
 ## Solution
-
