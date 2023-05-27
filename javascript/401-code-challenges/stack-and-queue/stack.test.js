@@ -24,4 +24,77 @@ describe('Stack', () => {
   });
 
 
+  test('Can successfully pop off the stack', () => {
+    let stack = new Stack();
+    stack.push(1);
+    stack.push(2);
+
+    expect(stack.top.value).toEqual(2);
+    expect(stack.top.next.value).toEqual(1);
+    expect(stack.top.next.next).toBeNull();
+    stack.pop();
+
+    expect(stack.top.value).toEqual(1);
+    expect(stack.top.next).toBeNull();
+    stack.pop();
+
+    expect(stack.top).toBeNull();
+  })
+
+
+  test('Can successfully empty a stack after multiple pops', () => {
+    let stack = new Stack();
+    stack.push(1);
+    stack.push(2);
+
+    expect(stack.top.value).toEqual(2);
+    expect(stack.top.next.value).toEqual(1);
+    expect(stack.top.next.next).toBeNull();
+    stack.pop();
+
+    expect(stack.top.value).toEqual(1);
+    expect(stack.top.next).toBeNull();
+    stack.pop();
+
+    expect(stack.top).toBeNull();
+  });
+
+
+  test('Can successfully peek the next item on the stack', () => {
+    let stack = new Stack();
+    stack.push(1);
+    stack.push(2);
+
+    expect(stack.top.value).toEqual(2);
+    expect(stack.top.next.value).toEqual(1);
+    expect(stack.top.next.next).toBeNull();
+    expect(stack.peek()).toEqual(2);
+  });
+
+
+  test('Can successfully instantiate an empty stack', () => {
+    let stack = new Stack();
+    stack.push(1);
+    stack.push(2);
+
+    expect(stack.top.value).toEqual(2);
+    expect(stack.top.next.value).toEqual(1);
+    expect(stack.top.next.next).toBeNull();
+    expect(stack.isEmpty()).toEqual(false);
+    stack.pop();
+    stack.pop();
+
+    expect(stack.isEmpty()).toEqual(true);
+  });
+
+
+  test('Calling pop or peek on empty stack raises exception', () => {
+    let stack = new Stack();
+    expect(stack.pop()).toBeNull();
+    expect(stack.peek()).toBeNull();
+  });
+
+  
 });
+
+

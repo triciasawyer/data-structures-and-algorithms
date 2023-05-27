@@ -30,7 +30,11 @@ class Stack {
   }
 
   peek() {
-    return this.top.value;
+    if (this.top !== null) {
+      return this.top.value;
+    } else {
+      return null;
+    }
   }
 
   isEmpty() {
@@ -70,12 +74,16 @@ class Queue {
     return removedValue;
   }
 
-  peek(){
-
+  peek() {
+    if (this.front !== null) {
+      return this.front.value;
+    } else {
+      return null;
+    }
   }
 
-  isEmpty(){
-    
+  isEmpty() {
+    return (this.front === null);
   }
 
 }
