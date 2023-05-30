@@ -92,8 +92,8 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 2 - array insert shift](../javascript/401-code-challenges/array-insert-shift)
 - [code challenge 3 - array binary search](../javascript/401-code-challenges/array-binary-search)
 - [code challenge 4 - Mock interview]
-- [code challenge 5,6 - linked list](../javascript/linked-list/index.js)
+- [code challenge 5,6 - linked list](../javascript/linked-list)
 - [code challenge 7](../javascript/linked-list/index.js)
-- [code challenge 8 - linked list zip](../javascript/linked-list/index.js)
+- [code challenge 8 - linked list zip](../javascript/linked-list)
 - [code challenge 9 - Mock interview]
-- [code challenge 10 - stack and queue](../javascript/401-code-challenges/)
+- [code challenge 10 - stack and queue](../javascript/401-code-challenges/stack-and-queue)
