@@ -97,3 +97,5 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 8 - linked list zip](../javascript/linked-list)
 - [code challenge 9 - Mock interview]
 - [code challenge 10 - stack and queue](../javascript/401-code-challenges/stack-and-queue)
+- [code challenge 11 - PseudoQueue](../javascript/401-code-challenges/stack-and-queue/index.js)
+- [code challenge 12 - ......](../javascript/401-code-challenges/whiteboard-images/.....)

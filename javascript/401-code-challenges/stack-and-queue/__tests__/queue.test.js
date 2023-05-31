@@ -1,4 +1,5 @@
-const { Queue } = require('../stack-and-queue/index');
+const { Queue } = require('../index');
+
 
 describe('Queue', () => {
   test('Can successfully enqueue into a queue', () => {

@@ -1,4 +1,4 @@
-const { Stack } = require('../stack-and-queue/index');
+const { Stack } = require('../index');
 
 
 describe('Stack', () => {
@@ -94,7 +94,7 @@ describe('Stack', () => {
     expect(stack.peek()).toBeNull();
   });
 
-  
+
 });
 
 
