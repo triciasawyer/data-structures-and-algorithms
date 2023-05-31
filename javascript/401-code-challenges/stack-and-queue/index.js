@@ -96,17 +96,17 @@ class PseudoQueue {
   }
 
   enqueue(value) {
-    while (!this.stack1.isEmpty()) {
+    while (!this.stack1 > 0) {
       this.stack2.push(this.stack1.pop());
     }
     this.stack1.push(value);
-    while (!this.stack2.isEmpty()) {
+    while (!this.stack2 > 0) {
       this.stack1.push(this.stack2.pop());
     }
   }
 
   dequeue() {
-    if(this.stack1.isEmpty()) {
+    if(this.stack1 === 0) {
       return null;
     }
     return this.stack1.pop();
