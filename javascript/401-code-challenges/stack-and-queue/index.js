@@ -127,12 +127,12 @@ class AnimalShelter {
   constructor() {
     this.dog = [];
     this.cat = [];
-    this.timestamp = 0;
+    // this.timestamp = 0;
   }
 
   enqueue(animal) {
-    animal.timestamp = this.timestamp;
-    this.timestamp++;
+    // animal.timestamp = this.timestamp;
+    // this.timestamp++;
 
     if (animal.species === 'dog') {
       this.dog.push(animal);
@@ -151,22 +151,22 @@ class AnimalShelter {
         return null;
       }
 
-      if (this.dog.length === 0) {
-        return this.cat.shift();
-      }
+      // if (this.dog.length === 0) {
+      //   return this.cat.shift();
+      // }
 
-      if (this.cat.length === 0) {
-        return this.dog.shift();
-      }
+      // if (this.cat.length === 0) {
+      //   return this.dog.shift();
+      // }
 
-      const oldestDog = this.dog[0];
-      const oldestCat = this.cat[0];
+      // const oldestDog = this.dog[0];
+      // const oldestCat = this.cat[0];
 
-      if (oldestDog.timestamp < oldestCat.timestamp) {
-        return this.dog.shift();
-      } else {
-        return this.cat.shift();
-      }
+      // if (oldestDog.timestamp < oldestCat.timestamp) {
+      //   return this.dog.shift();
+      // } else {
+      //   return this.cat.shift();
+      // }
     }
   }
 }
