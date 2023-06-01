@@ -13,7 +13,7 @@ The shelter operates using a first-in, first-out approach. Implement the 2 stack
 ![Code challenge 10](../whiteboard-images/whiteboard10.png)
 ![Code challenge 11](../whiteboard-images/whiteboard11.png)
 ![Code challenge 12](../whiteboard-images/whiteboard12.png)
-![Code challenge 13](../whiteboard-images/)
+![Code challenge 13](../whiteboard-images/whiteboard13.png)
 
 ## Approach and Efficiency
 
@@ -36,7 +36,7 @@ AnimalShelter
 Time: O(1)
 Space: O(1)
 
-ValidateBrackets
+validateBrackets
 Time: O(n)
 Space: O(n)
 
@@ -45,4 +45,4 @@ Space: O(n)
 - Worked on code challenge 10 with Ryan in lecture.
 - Code challenge 11 was just me, due to unavailability
 - Assigned partner wasn't available for code challenge 12
--
+- Wasn't available for partnering
