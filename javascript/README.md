@@ -85,6 +85,9 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 5,6 - linked list tests](../javascript/linked-list/__tests__/linked-list.test.js)
 - [code challenge 7 - linked list kth tests](../javascript/linked-list/__tests__/linked-list-kth.test.js)
 - [code challenge 8 - linked list zip tests](../javascript/linked-list/__tests__/linked-list-zip.test.js)
+- [code challenge 10 - stack and queue tests](../javascript/401-code-challenges/stack-and-queue/__tests__/)
+- [code challenge 11 - stack and queue tests](../javascript/401-code-challenges/stack-and-queue/__tests__/pseudo-queue.test.js)
+- [code challenge 12 - stack and queue animal shelter tests](../javascript/401-code-challenges/stack-and-queue/__tests__/stack-queue-animal-shelter.test.js)
 
 ### Code challenges TOC
 
@@ -98,4 +101,4 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 9 - Mock interview]
 - [code challenge 10 - stack and queue](../javascript/401-code-challenges/stack-and-queue)
 - [code challenge 11 - PseudoQueue](../javascript/401-code-challenges/stack-and-queue/index.js)
-- [code challenge 12 - ......](../javascript/401-code-challenges/whiteboard-images/.....)
+- [code challenge 12 - AnimalShelter](../javascript/401-code-challenges/whiteboard-images/whiteboard12.png)
