@@ -172,5 +172,27 @@ class AnimalShelter {
 }
 
 
+function validateBrackets(str) {
+  const stack = [];
+  const openBrackets = ['(', '[', '{'];
+  const closeBrackets = [')', ']', '}'];
 
-module.exports = { Stack, Queue, PseudoQueue, Animal, AnimalShelter };
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    if (openBrackets.includes(char)) {
+      stack.push(char);
+    } else if (closeBrackets.includes(char)) {
+      const openBracket = openBrackets[closeBrackets.indexOf(char)];
+      if (stack.length === 0 || stack.pop() !== openBracket) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}
+
+
+
+module.exports = { Stack, Queue, PseudoQueue, Animal, AnimalShelter, validateBrackets };
