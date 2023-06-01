@@ -1,31 +1,31 @@
 'use strict';
 
 
-const { validateBrackets, validateBrackets } = require('../index');
+const { validateBrackets } = require('../index');
 
 
 describe('validateBrackets', () => {
-  test('Brackets are balanced or true', () => {
-    let validateBrackets = new validateBrackets();
+  test('Are balanced or true', () => {
+    const string = 'This is (correct)';
+    let test = validateBrackets(string);
 
+    expect(test).toBe(true);
   });
 
 
-  test('Brackets are unbalanced or false', () => {
-    let validateBrackets = new validateBrackets();
+  test('Are unbalanced or false', () => {
+    const string = 'This is (incorrect}';
+    let test = validateBrackets(string);
 
+    expect(test).toBe(false);
   });
 
 
-  test('There is an additional character, so it is false', () => {
-    let validateBrackets = new validateBrackets();
+  test('Includes an additional character, so they are unbalanced and false', () => {
+    const string = 'This is (incorrect)}';
+    let test = validateBrackets(string);
 
-  });
-
-
-  test('Brackets are balanced or true', () => {
-    let validateBrackets = new validateBrackets();
-
+    expect(test).toBe(false);
   });
 
 
