@@ -88,6 +88,9 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 10 - stack and queue tests](../javascript/401-code-challenges/stack-and-queue/__tests__/)
 - [code challenge 11 - stack and queue tests](../javascript/401-code-challenges/stack-and-queue/__tests__/pseudo-queue.test.js)
 - [code challenge 12 - stack and queue animal shelter tests](../javascript/401-code-challenges/stack-and-queue/__tests__/stack-queue-animal-shelter.test.js)
+- [code challenge 13 - stack and queue brackets](../javascript/401-code-challenges/stack-and-queue/__tests__/stack-queue-brackets.test.js)
+- [code challenge 15 - trees](../javascript/401-code-challenges/trees/__tests__/trees.test.js)
+- [code challenge 15 - K-ary trees](../javascript/401-code-challenges/trees/__tests__/kary-trees.test.js)
 
 ### Code challenges TOC
 
@@ -98,3 +101,5 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 5-8 - linked list](../javascript/linked-list/README.md)
 - [code challenge 9 - Mock interview]
 - [code challenge 10-13 - stack and queue](../javascript/401-code-challenges/stack-and-queue/README.md)
+- [code challenge 14 - Mock interview]
+- [code challenge 15 - Trees and K-ary Trees](../javascript/401-code-challenges/trees/README.md)

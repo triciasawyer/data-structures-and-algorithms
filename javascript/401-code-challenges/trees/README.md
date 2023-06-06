@@ -18,7 +18,7 @@ Contains: Argument: value, Returns: boolean indicating whether or not the value 
 
 ## Whiteboard process
 
-![Code challenge 15](../whiteboard-images/)
+![Code challenge 15](../whiteboard-images/whiteboard15.png)
 
 ## Approach and Efficiency
 
@@ -33,3 +33,5 @@ Time: Add method is O(k) worst case, contains method is O(n)
 Space: Add method is O(1), contains method is O(h)
 
 ## Collaborators
+
+Used chatgtp to help me with the step through, and just reworded it to help my understanding of the trees in general.
