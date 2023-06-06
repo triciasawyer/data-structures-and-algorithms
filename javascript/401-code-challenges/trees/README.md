@@ -28,4 +28,8 @@ Trees
 Time: O(n) for traversals, O(h) for add() and contains()
 Space: O(n) for traversals, O(h) for add() and contains()
 
+KaryTrees
+Time: Add method is O(k) worst case, contains method is O(n)
+Space: Add method is O(1), contains method is O(h)
+
 ## Collaborators
