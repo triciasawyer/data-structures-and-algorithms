@@ -44,7 +44,7 @@ Space: Add method is O(1), contains method is O(h)
 
 findMaxValue
 Time: O(n)
-Space: O(n)
+Space: O(1)
 
 breadthFirst
 Time: O(n)
@@ -53,3 +53,5 @@ Space: O(n), or O(m) depending on how balanced or complete the tree is.
 ## Collaborators
 
 Used chatgtp to help me with the step through for code challenge 15, and just reworded it to help my understanding of the trees in general.
+
+Used chatgtp to illustrate lab 16 in finding the max value and the directions the tree strucutre follows.

@@ -1,26 +1,33 @@
 'use strict';
 
 
-const { BinaryTree, Node } = require('../index');
+const { BinaryTree } = require('../index');
 
 
 describe('BinaryTree findMaxValue function', () => {
-  test('Can successfully return the max value from a binary tree', () => {
+  test('Binary tree is empty', () => {
     const tree = new BinaryTree();
-    tree.root = new Node(1);
-    tree.root.left = new Node(5);
-    tree.root.right = new Node(9);
-    tree.root.left.left = new Node(7);
-    tree.root.left.right = new Node(3);
-
-    expect(tree.findMaxValue()).toEqual(9);
+    expect(tree.findMaxValue()).toBeNull();
   });
 
 
   test('Can successfully return the max value from a binary tree', () => {
     const tree = new BinaryTree();
+    tree.root = {
+      value: 4,
+      left: {
+        value: 2,
+        left: { value: 1, left: null, right: null },
+        right: { value: 3, left: null, right: null },
+      },
+      right: {
+        value: 7,
+        left: { value: 6, left: null, right: null },
+        right: { value: 9, left: null, right: null },
+      },
+    };
 
-    expect(tree.findMaxValue()).toBeNull();
+    expect(tree.findMaxValue()).toEqual(9);
   });
 
 

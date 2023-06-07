@@ -57,26 +57,24 @@ class BinaryTree {
   }
 
 
+  // code challenge 16
   findMaxValue() {
-    const results = [];
-    if(this.root === null){
+    if (this.root === null) {
       return null;
     }
 
-    const traverse = (node) => {
+    return this.findMaxValueHelper(this.root);
+  }
 
-      if (node.left) {
-        traverse(node.left);
-      }
-      results.push(node.value);
-      if (node.right) {
-        traverse(node.right);
-      }
-    };
+  findMaxValueHelper(node) {
+    if (node === null) {
+      return Number.NEGATIVE_INFINITY;
+    }
 
-    traverse(this.root);
-    let maxValue = results.pop();
-    return maxValue;
+    const leftMax = this.findMaxValueHelper(node.left);
+    const rightMax = this.findMaxValueHelper(node.right);
+
+    return Math.max(node.value, leftMax, rightMax);
   }
 
 
