@@ -1,7 +1,7 @@
 'use strict';
 
 
-const { KaryTree } = require('../indexK');
+const { KaryTree } = require('../kary-tree/index');
 
 
 describe('KaryTrees', () => {
