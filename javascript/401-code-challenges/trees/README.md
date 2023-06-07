@@ -32,6 +32,10 @@ KaryTrees
 Time: Add method is O(k) worst case, contains method is O(n)
 Space: Add method is O(1), contains method is O(h)
 
+findMaxValue
+Time:
+Space:
+
 ## Collaborators
 
-Used chatgtp to help me with the step through, and just reworded it to help my understanding of the trees in general.
+Used chatgtp to help me with the step through for code challenge 15, and just reworded it to help my understanding of the trees in general.

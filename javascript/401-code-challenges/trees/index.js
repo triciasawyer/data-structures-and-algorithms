@@ -62,6 +62,7 @@ class BinaryTree {
     if(this.root === null){
       return -1;
     }
+
     const traverse = (node) => {
 
       if (node.left) {
@@ -72,6 +73,7 @@ class BinaryTree {
         traverse(node.right);
       }
     };
+    
     traverse(this.root);
     let maxValue = results.pop();
     return maxValue;
