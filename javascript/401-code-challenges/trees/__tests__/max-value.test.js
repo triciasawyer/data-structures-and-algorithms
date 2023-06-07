@@ -17,4 +17,11 @@ describe('BinaryTree findMaxValue function', () => {
   });
 
 
+  test('Can successfully return the max value from a binary tree', () => {
+    const tree = new BinaryTree();
+
+    expect(tree.findMaxValue()).toBeNull();
+  });
+
+
 });

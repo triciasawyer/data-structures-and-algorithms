@@ -103,5 +103,4 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 10-13 - stack and queue](../javascript/401-code-challenges/stack-and-queue/README.md)
 - [code challenge 14 - Mock interview]
 - [code challenge 15 - Trees and K-ary Trees](../javascript/401-code-challenges/trees/README.md)
--
-[code challenge 16 - tree max](../javascript/401-code-challenges/trees/README.md)
+- [code challenge 16 - Binary tree max value](../javascript/401-code-challenges/trees/README.md)

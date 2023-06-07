@@ -60,7 +60,7 @@ class BinaryTree {
   findMaxValue() {
     const results = [];
     if(this.root === null){
-      return -1;
+      return null;
     }
 
     const traverse = (node) => {
@@ -73,7 +73,7 @@ class BinaryTree {
         traverse(node.right);
       }
     };
-    
+
     traverse(this.root);
     let maxValue = results.pop();
     return maxValue;
