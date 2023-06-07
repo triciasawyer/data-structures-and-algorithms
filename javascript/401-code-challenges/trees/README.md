@@ -28,10 +28,11 @@ Find the maximum value stored in the tree. You can assume that the values stored
 
 ![Code challenge 15](../whiteboard-images/whiteboard15.png)
 ![Code challenge 16](../whiteboard-images/whiteboard16.png)
+![Code challenge 17](../whiteboard-images/whiteboard17.png)
 
 ## Approach and Efficiency
 
-My BigO:
+My BigO for each challenge within this :
 
 Trees
 Time: O(n) for traversals, O(h) for add() and contains()
@@ -44,6 +45,10 @@ Space: Add method is O(1), contains method is O(h)
 findMaxValue
 Time: O(n)
 Space: O(n)
+
+breadthFirst
+Time: O(n)
+Space: O(n), or O(m) depending on how balanced or complete the tree is.
 
 ## Collaborators
 
