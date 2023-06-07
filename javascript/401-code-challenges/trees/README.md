@@ -1,8 +1,8 @@
-# Code challenge 15
+# Code challenge 15-16
 
 ## Challenge Title
 
-Features
+Features lab 15:
 Node: Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 Binary Tree: Create a Binary Tree class and define a method for each of the depth first traversals:
 
@@ -16,9 +16,18 @@ Add: Arguments: value, Return: nothing, Adds a new node with that value in the c
 
 Contains: Argument: value, Returns: boolean indicating whether or not the value is in the tree at least once.
 
+Features lab 16:
+Write the following method for the Binary Tree class
+
+find maximum value
+Arguments: none
+Returns: number
+Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
 ## Whiteboard process
 
 ![Code challenge 15](../whiteboard-images/whiteboard15.png)
+![Code challenge 16](../whiteboard-images/whiteboard16.png)
 
 ## Approach and Efficiency
 
@@ -32,6 +41,10 @@ KaryTrees
 Time: Add method is O(k) worst case, contains method is O(n)
 Space: Add method is O(1), contains method is O(h)
 
+findMaxValue
+Time: O(n)
+Space: O(n)
+
 ## Collaborators
 
-Used chatgtp to help me with the step through, and just reworded it to help my understanding of the trees in general.
+Used chatgtp to help me with the step through for code challenge 15, and just reworded it to help my understanding of the trees in general.

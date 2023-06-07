@@ -59,5 +59,3 @@ describe('KaryTrees', () => {
 });
 
 
-module.exports = { KaryTree };
-

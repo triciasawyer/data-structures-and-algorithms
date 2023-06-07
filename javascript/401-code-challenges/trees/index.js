@@ -55,6 +55,31 @@ class BinaryTree {
     this.postOrderHelper(node.right, result);
     result.push(node.value);
   }
+
+
+  findMaxValue() {
+    const results = [];
+    if(this.root === null){
+      return null;
+    }
+
+    const traverse = (node) => {
+
+      if (node.left) {
+        traverse(node.left);
+      }
+      results.push(node.value);
+      if (node.right) {
+        traverse(node.right);
+      }
+    };
+
+    traverse(this.root);
+    let maxValue = results.pop();
+    return maxValue;
+  }
+
+
 }
 
 
@@ -98,8 +123,9 @@ class BinarySearchTree extends BinaryTree {
       return this.containsNode(node.right, value);
     }
   }
+
 }
 
 
 
-module.exports = { BinaryTree, BinarySearchTree };
+module.exports = { BinaryTree, BinarySearchTree, Node };
