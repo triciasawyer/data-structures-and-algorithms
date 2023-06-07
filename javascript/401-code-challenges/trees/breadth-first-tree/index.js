@@ -2,6 +2,10 @@
 
 
 function breadthFirst(tree) {
+  if (tree === null) {
+    return [];
+  }
+
   const queue = [tree];
   const result = [];
 
