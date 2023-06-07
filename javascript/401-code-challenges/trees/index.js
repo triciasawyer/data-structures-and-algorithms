@@ -15,35 +15,6 @@ class BinaryTree {
     this.root = null;
   }
 
-// challenge 16
-findMaxValue() {
-  if (this.root === null) {
-    return null;
-  }
-
-  // Start with the smallest possible value
-  let maxValue = Number.NEGATIVE_INFINITY;
-
-  this.findMaxValueHelper(this.root);
-
-  return maxValue;
-}
-
-findMaxValueHelper(node) {
-  if (node === null) {
-    return;
-  }
-
-  // Update the maximum value if the current node's value is greater
-  if (node.value > maxValue) {
-    maxValue = node.value;
-  }
-
-  this.findMaxValueHelper(node.left);
-  this.findMaxValueHelper(node.right);
-}
-
-
   // Pre-order traversal: Root -> Left -> Right
   preOrder() {
     const result = [];
@@ -84,6 +55,29 @@ findMaxValueHelper(node) {
     this.postOrderHelper(node.right, result);
     result.push(node.value);
   }
+
+
+  findMaxValue() {
+    const results = [];
+    if(this.root === null){
+      return -1;
+    }
+    const traverse = (node) => {
+
+      if (node.left) {
+        traverse(node.left);
+      }
+      results.push(node.value);
+      if (node.right) {
+        traverse(node.right);
+      }
+    };
+    traverse(this.root);
+    let maxValue = results.pop();
+    return maxValue;
+  }
+
+
 }
 
 
@@ -127,8 +121,9 @@ class BinarySearchTree extends BinaryTree {
       return this.containsNode(node.right, value);
     }
   }
+
 }
 
 
 
-module.exports = { BinaryTree, BinarySearchTree, findMaxValue };
+module.exports = { BinaryTree, BinarySearchTree, Node };
