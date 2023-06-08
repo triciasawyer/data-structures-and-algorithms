@@ -44,7 +44,7 @@ Space: Add method is O(1), contains method is O(h)
 
 findMaxValue
 Time: O(n)
-Space: O(1)
+Space: O(h)
 
 breadthFirst
 Time: O(n)
