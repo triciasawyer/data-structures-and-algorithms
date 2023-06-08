@@ -93,6 +93,7 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 15 - K-ary trees](../javascript/401-code-challenges/trees/__tests__/kary-trees.test.js)
 - [code challenge 16 - Binary tree max value](../javascript/401-code-challenges/trees/__tests__/max-value.test.js)
 - [code challenge 17 - Binary tree breadth first](../javascript/401-code-challenges/trees/__tests__/breadth-first.test.js)
+- [code challenge 18 - Fizz Buzz K-ary tree](../javascript/401-code-challenges/trees/__tests__/fizz-buzz.test.js)
 
 ### Code challenges TOC
 
@@ -107,3 +108,4 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 15 - Trees and K-ary Trees](../javascript/401-code-challenges/trees/README.md)
 - [code challenge 16 - Binary tree max value](../javascript/401-code-challenges/trees/README.md)
 - [code challenge 17 - Binary tree breadth first](../javascript/401-code-challenges/trees/README.md)
+- [code challenge 18 - Fizz Buzz K-ary tree](../javascript/401-code-challenges/trees/README.md)

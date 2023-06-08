@@ -5,7 +5,7 @@ const { fizzBuzzTree, Node } = require('../fizz-buzz-tree/index');
 
 
 describe('Fizz Buzz tree', () => {
-  test('The original tree has a single node', () => {
+  test('Has a single node', () => {
     const tree = new Node(3);
     const newTree = fizzBuzzTree(tree);
 
@@ -14,7 +14,7 @@ describe('Fizz Buzz tree', () => {
   })
 
 
-  test('The original tree has a root node with two child nodes', () => {
+  test('Has a root node with two child nodes', () => {
     const tree = new Node(15);
     tree.children.push(new Node(5));
     tree.children.push(new Node(9));
@@ -26,7 +26,7 @@ describe('Fizz Buzz tree', () => {
   });
 
 
-  test('The original tree has a root node with two child nodes, that each child has child nodes ', () => {
+  test('Has a root node with two child nodes, that each child has child nodes', () => {
     const tree = new Node(10);
     tree.children.push(new Node(3));
     tree.children.push(new Node(20));

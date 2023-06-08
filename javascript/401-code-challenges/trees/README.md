@@ -29,6 +29,7 @@ Find the maximum value stored in the tree. You can assume that the values stored
 ![Code challenge 15](../whiteboard-images/whiteboard15.png)
 ![Code challenge 16](../whiteboard-images/whiteboard16.png)
 ![Code challenge 17](../whiteboard-images/whiteboard17.png)
+![Code challenge 18](../whiteboard-images/whiteboard18.png)
 
 ## Approach and Efficiency
 
@@ -50,8 +51,14 @@ breadthFirst
 Time: O(n)
 Space: O(n), or O(m) depending on how balanced or complete the tree is.
 
+fizzBuzzTree
+Time: O(n)
+Space: O(h)
+
 ## Collaborators
 
-Used chatgtp to help me with the step through for code challenge 15, and just reworded it to help my understanding of the trees in general.
+- Used chatgtp to help me with the step through for code challenge 15, and just reworded it to help my understanding of the trees in general.
 
-Used chatgtp to illustrate lab 16 in finding the max value and the directions the tree strucutre follows.
+- Used chatgtp to illustrate lab 16 in finding the max value and the directions the tree structure follows.
+
+- Used chatgtp to help fix my tests that were failing
