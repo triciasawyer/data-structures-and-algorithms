@@ -22,3 +22,6 @@ function insertionSort(input) {
   }
   return sorted;
 }
+
+
+module.exports = { insert, insertionSort };

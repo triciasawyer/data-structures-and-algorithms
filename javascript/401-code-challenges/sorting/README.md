@@ -7,7 +7,7 @@ Once you are done with your article, code a working, tested implementation of In
 
 ## Whiteboard process
 
-![Code challenge 26](../whiteboard-images/   )
+![Code challenge 26](../whiteboard-images/whiteboard26.png)
 
 ## Approach and Efficiency
 
