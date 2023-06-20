@@ -12,7 +12,8 @@ function insert(sorted, value) {
 
 function insertionSort(input) {
   if (input.length === 0) {
-    return []; // Return an empty array if the input is empty
+    // Return an empty array if the input is empty
+    return [];
   }
 
   let sorted = [];
