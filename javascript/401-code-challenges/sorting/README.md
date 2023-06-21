@@ -15,6 +15,6 @@ My BigO:
 
 Insertion
 Time: O(n^2)
-Space: O(1)
+Space: O(n), since initialized as empty array
 
 ## Collaborators

@@ -2,19 +2,20 @@
 
 
 function insert(sorted, value) {
-  let i = 0;
-  while (value > sorted[i]) {
-    i++;
+  let i = sorted.length - 1;
+  while (i >= 0 && value < sorted[i]) {
+    sorted[i + 1] = sorted[i];
+    i--;
   }
-  for (let j = sorted.length - 1; j >= i; j--) {
-    let temp = sorted[j];
-    sorted[j] = value;
-    value = temp;
-  }
-  sorted.push(value);
+  sorted[i + 1] = value;
 }
 
 function insertionSort(input) {
+  if (input.length === 0) {
+    // Return an empty array if the input is empty
+    return [];
+  }
+
   let sorted = [];
   sorted[0] = input[0];
   for (let i = 1; i < input.length; i++) {
@@ -22,6 +23,5 @@ function insertionSort(input) {
   }
   return sorted;
 }
-
 
 module.exports = { insert, insertionSort };
