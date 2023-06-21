@@ -23,3 +23,5 @@ Time: O(n log n)
 Space: O(n)
 
 ## Collaborators
+
+I referenced chat gpt for editing my code solution and how the tests would look.
