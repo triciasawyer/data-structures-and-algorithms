@@ -95,6 +95,7 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 17 - Binary tree breadth first](../javascript/401-code-challenges/trees/__tests__/breadth-first.test.js)
 - [code challenge 18 - Fizz Buzz K-ary tree](../javascript/401-code-challenges/trees/__tests__/fizz-buzz.test.js)
 - [code challenge 26 - sorting insertion](../javascript/401-code-challenges/sorting/__tests__/insert.test.js)
+- [code challenge 27 - merge sort](../javascript/401-code-challenges/sorting/__tests__/merge.test.js)
 
 ### Code challenges TOC
 
@@ -111,3 +112,4 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 17 - Binary tree breadth first](../javascript/401-code-challenges/trees/README.md)
 - [code challenge 18 - Fizz Buzz K-ary tree](../javascript/401-code-challenges/trees/README.md)
 - [code challenge 26 - sorting insertion](../javascript/401-code-challenges/sorting/README.md)
+- [code challenge 27 - merge sort](../javascript/401-code-challenges/sorting/README.md)
