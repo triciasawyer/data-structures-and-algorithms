@@ -17,9 +17,9 @@ const Movies = [
     genres: ["Action", "Adventure", "Sci-Fi"],
   },
   {
-    title: "13 Hours: The Secret Soldiers of Benghazi",
-    year: 2016,
-    genres: ["War", "Action"],
+    title: "American Sniper",
+    year: 2014,
+    genres: ["War", "Drama"],
   },
   {
     title: "Hustle",
