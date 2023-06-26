@@ -72,3 +72,6 @@ class Hashtable {
     return this._hash(key);
   }
 }
+
+
+module.exports = { Hashtable };
