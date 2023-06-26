@@ -50,8 +50,12 @@ Ensure your tests are passing before you submit your solution.
 
 ## Whiteboard process
 
+Not required for this challenge
+
 ## Approach and Efficiency
 
 My BigO:
 
 ## Collaborators
+
+Used chatgpt to help write tests and branched off of Ryan's code review in class
