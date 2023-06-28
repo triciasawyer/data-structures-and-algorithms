@@ -1,4 +1,4 @@
-const { treeIntersection, BinaryTree, Node } = require('./tree-intersection');
+const { treeIntersection, traverseTree, BinaryTree, Node } = require('./tree-intersection');
 
 
 describe('Tree intersection functionality', () => {
@@ -19,4 +19,31 @@ describe('Tree intersection functionality', () => {
 
     expect(treeIntersection(tree1, tree2)).toEqual(new Set([125, 160, 200]));
   });
+
+  
+  test('Should add node values to the values set', () => {
+    const valuesSet = new Set();
+    const node1 = new Node(1);
+    const node2 = new Node(2);
+    const node3 = new Node(3);
+
+    node1.left = node2;
+    node1.right = node3;
+
+    traverseTree(node1, valuesSet);
+
+    expect(valuesSet).toEqual(new Set([1, 2, 3]));
+  });
+
+
+  test('Should handle empty tree', () => {
+    const valuesSet = new Set();
+    const node = null;
+
+    traverseTree(node, valuesSet);
+
+    expect(valuesSet).toEqual(new Set());
+  });
+
+
 });
