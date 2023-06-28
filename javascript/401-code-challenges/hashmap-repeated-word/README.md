@@ -18,7 +18,7 @@ Ensure your tests are passing before you submit your solution.
 
 ## Whiteboard process
 
-![code challenge 31](../whiteboard-images/)
+![code challenge 31](../whiteboard-images/whiteboard31.png)
 
 ## Approach and Efficiency
 
@@ -26,7 +26,7 @@ My BigO:
 
 hashmap
 Time: O(n)
-Space: O(m)
+Space: O(n)
 
 ## Collaborators
 
