@@ -33,7 +33,7 @@ class Hashtable {
   get(key) {
     const index = this._hash(key);
     if (!this.table[index]) {
-      return undefined;
+      return null;
     }
     for (let entry of this.table[index]) {
       if (entry[0] === key) {

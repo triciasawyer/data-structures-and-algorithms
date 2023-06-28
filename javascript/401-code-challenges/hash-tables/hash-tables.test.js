@@ -24,7 +24,7 @@ describe('Hash tables', () => {
   test('Successfully returns null for a key that does not exist in the hashtable', () => {
     const hashtable = new Hashtable();
 
-    expect(hashtable.get('nonexistent')).toBeUndefined();
+    expect(hashtable.get('nonexistent')).toBe(null);
   });
 
 
