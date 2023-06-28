@@ -96,6 +96,8 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 18 - Fizz Buzz K-ary tree](../javascript/401-code-challenges/trees/__tests__/fizz-buzz.test.js)
 - [code challenge 26 - sorting insertion](../javascript/401-code-challenges/sorting/__tests__/insert.test.js)
 - [code challenge 27 - merge sort](../javascript/401-code-challenges/sorting/__tests__/merge.test.js)
+- [code challenge 30 - hash tables](../javascript/401-code-challenges/hash-tables/hash-tables.test.js)
+- [code challenge 31 - hashmap repeated word](../javascript/401-code-challenges/hashmap-repeated-word/hashmap.test.js)
 
 ### Code challenges TOC
 
@@ -113,3 +115,5 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 18 - Fizz Buzz K-ary tree](../javascript/401-code-challenges/trees/README.md)
 - [code challenge 26 - sorting insertion](../javascript/401-code-challenges/sorting/README.md)
 - [code challenge 27 - merge sort](../javascript/401-code-challenges/sorting/README.md)
+- [code challenge 30 - hash tables](../javascript/401-code-challenges/hash-tables/README.md)
+- [code challenge 31 - hashmap repeated word](../javascript/401-code-challenges/hashmap-repeated-word/README.md)
