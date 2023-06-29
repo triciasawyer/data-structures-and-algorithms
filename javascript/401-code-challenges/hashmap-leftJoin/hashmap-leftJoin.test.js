@@ -1,18 +1,17 @@
-const { leftJoin } = require('./index');
+const { join } = require('./index');
 
 
 describe('Hashmap leftJoin tests', () => {
   test('if the Hashmaps are empty', () => {
     const synonyms = {};
     const antonyms = {};
-    const result = leftJoin(synonyms, antonyms);
+    const result = join(synonyms, antonyms, 'LEFT', 'RIGHT');
 
     expect(result === null).toBe(true);
   });
 
 
-
-  test('if the leftJoin method works correctly with the 2 hashmaps, synonyms and antonyms', () => {
+  test('Should return the correct results of the synonyms and antonyms for both left and right join', () => {
     const synonyms = {
       happy: 'joyful',
       sad: 'unhappy',
@@ -25,19 +24,27 @@ describe('Hashmap leftJoin tests', () => {
       good: 'bad'
     };
 
-    const expectedResult = {
+    const expectedResultLeft = {
       happy: ['joyful', 'unhappy'],
       sad: ['unhappy', 'happy'],
       good: ['great', 'bad']
     };
 
-    const result = leftJoin(synonyms, antonyms);
+    const expectedResultRight = {
+      happy: ['joyful', 'unhappy'],
+      sad: ['unhappy', 'happy'],
+      good: ['great', 'bad']
+    };
 
-    expect(JSON.stringify(result) === JSON.stringify(expectedResult));  // Output: true
+    const resultLeft = join(synonyms, antonyms, 'LEFT');
+    const resultRight = join(synonyms, antonyms, 'RIGHT');
+
+    expect(JSON.stringify(resultLeft) === JSON.stringify(expectedResultLeft)).toBe(true);
+    expect(JSON.stringify(resultRight) === JSON.stringify(expectedResultRight)).toBe(true);
   });
 
 
-  test('if there is missing antonyms', () => {
+  test('Should handle missing antonyms in both left and right join', () => {
     const synonyms = {
       hot: 'scorching',
       cold: 'freezing',
@@ -45,18 +52,28 @@ describe('Hashmap leftJoin tests', () => {
     };
 
     const antonyms = {
-      hot: 'cold'
+      hot: 'cold',
+      old: 'new'
     };
 
-    const expectedResult = {
+    const expectedResultLeft = {
       hot: ['scorching', 'cold'],
       cold: ['freezing', null],
-      old: ['ancient', null]
+      old: ['ancient', 'new']
     };
 
-    const result = leftJoin(synonyms, antonyms);
+    const expectedResultRight = {
+      hot: ['scorching', 'cold'],
+      cold: ['freezing', null],
+      old: ['ancient', 'new']
+    };
 
-    expect(JSON.stringify(result) === JSON.stringify(expectedResult)).toBe(true);
+    const resultLeft = join(synonyms, antonyms, 'LEFT');
+    const resultRight = join(synonyms, antonyms, 'RIGHT');
+
+    expect(JSON.stringify(resultLeft) === JSON.stringify(expectedResultLeft)).toBe(true);
+    expect(JSON.stringify(resultRight) === JSON.stringify(expectedResultRight)).toBe(true);
   });
+
 
 });
