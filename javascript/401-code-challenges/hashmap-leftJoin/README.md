@@ -30,7 +30,7 @@ Ensure your tests are passing before you submit your solution.
 
 ## Whiteboard process
 
-![code challenge 33](../whiteboard-images/)
+![code challenge 33](../whiteboard-images/whiteboard33.png)
 
 ## Approach and Efficiency
 

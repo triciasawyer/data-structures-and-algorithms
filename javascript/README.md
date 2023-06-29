@@ -99,7 +99,7 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 30 - hash tables](../javascript/401-code-challenges/hash-tables/hash-tables.test.js)
 - [code challenge 31 - hashmap repeated word](../javascript/401-code-challenges/hashmap-repeated-word/hashmap.test.js)
 - [code challenge 32 - tree intersection](../javascript/401-code-challenges/tree-intersection/tree-intersection.test.js)
-- [code challenge 33 - hashmap left join](../javascript/401-code-challenges/)
+- [code challenge 33 - hashmap left join](../javascript/401-code-challenges/hashmap-leftJoin/hashmap-leftJoin.test.js)
 
 ### Code challenges TOC
 
@@ -120,4 +120,4 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 - [code challenge 30 - hash tables](../javascript/401-code-challenges/hash-tables/README.md)
 - [code challenge 31 - hashmap repeated word](../javascript/401-code-challenges/hashmap-repeated-word/README.md)
 - [code challenge 32 - tree intersection](../javascript/401-code-challenges/tree-intersection/README.md)
-- [code challenge 33 - hashmap left join](../javascript/401-code-challenges/)
+- [code challenge 33 - hashmap left join](../javascript/401-code-challenges/hashmap-leftJoin/README.md)
