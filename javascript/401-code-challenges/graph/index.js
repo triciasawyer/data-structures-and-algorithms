@@ -1,4 +1,4 @@
-'use strict;'
+'use strict';
 
 class Graph {
   constructor() {
@@ -24,15 +24,13 @@ class Graph {
   }
 
   getNeighbors(node) {
-    if (this.graph.has(node)) {
-      const neighbors = this.graph.get(node);
-      return neighbors.map((edge) => {
-        const { node1, node2, weight } = edge;
-        const connectedNode = node1 === node ? node2 : node1;
-        return { node: connectedNode, weight };
-      });
-    }
-    return [];
+    const neighbors = this.graph.get(node) || [];
+    return neighbors.map(neighbor => {
+      return {
+        node: neighbor.node2,
+        weight: neighbor.weight
+      };
+    });
   }
 
   size() {
