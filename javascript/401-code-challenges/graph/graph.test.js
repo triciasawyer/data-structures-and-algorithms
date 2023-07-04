@@ -72,7 +72,7 @@ describe('Graph', () => {
     expect(graph.size()).toBe(3);
   });
 
-
+// Had issues with this test, had to update code, particularly the getNeighbors method
   test('A graph with only one node and edge can be properly returned', () => {
     const graph = new Graph();
     const nodeA = graph.addNode('A');
