@@ -63,3 +63,7 @@ Space: O(n)
 ## Collaborators
 
 Ryan graph data structure demo and chatgpt to help fix tests that weren't passing due to some of my code that needed to be edited.
+
+## Links and Resources
+
+[Loop graph theory](https://en.wikipedia.org/wiki/Loop_(graph_theory))

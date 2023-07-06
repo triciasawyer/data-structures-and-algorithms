@@ -72,17 +72,17 @@ describe('Graph', () => {
     expect(graph.size()).toBe(3);
   });
 
-// Had issues with this test, had to update code, particularly the getNeighbors method
+// Node can connect itself!
   test('A graph with only one node and edge can be properly returned', () => {
     const graph = new Graph();
     const nodeA = graph.addNode('A');
-    const nodeB = graph.addNode('B');
-    graph.addEdge(nodeA, nodeB, 3);
+    // const nodeB = graph.addNode('B');
+    graph.addEdge(nodeA, nodeA, 3);
 
     const neighbors = graph.getNeighbors(nodeA);
 
     expect(neighbors.length).toBe(1);
-    expect(neighbors[0].node).toBe(nodeB);
+    expect(neighbors[0].node).toBe(nodeA);
     expect(neighbors[0].weight).toBe(3);
   });
 

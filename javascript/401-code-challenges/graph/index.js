@@ -11,11 +11,13 @@ class Graph {
     return node;
   }
 
+  // directed graph -- undirected graph will have an edge between two nodes that represents a connection that works in both directions
   addEdge(node1, node2, weight = null) {
     if (this.graph.has(node1) && this.graph.has(node2)) {
       const edge = new Edge(node1, node2, weight);
       this.graph.get(node1).push(edge);
-      this.graph.get(node2).push(edge);
+      // this.graph.get(node2).push(edge);
+
     }
   }
 
