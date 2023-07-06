@@ -17,7 +17,6 @@ class Graph {
       const edge = new Edge(node1, node2, weight);
       this.graph.get(node1).push(edge);
       // this.graph.get(node2).push(edge);
-
     }
   }
 
@@ -37,6 +36,34 @@ class Graph {
 
   size() {
     return this.graph.size;
+  }
+
+  // code challenge 36, graph breadth first implementation
+  breadthFirst(node) {
+    if (!node) {
+      return [];
+    }
+
+    let visited = new Set();
+    let visitedOrder = [];
+    let queue = [];
+
+    queue.push(node);
+    visited.add(node);
+
+    while (queue.length > 0) {
+      let currentNode = queue.shift();
+      visitedOrder.push(currentNode);
+
+      let neighbors = this.getNeighbors(currentNode);
+      neighbors.forEach((neighbor) => {
+        if (!visited.has(neighbor.node)) {
+          visited.add(neighbor.node);
+          queue.push(neighbor.node);
+        }
+      });
+    }
+    return visitedOrder;
   }
 }
 

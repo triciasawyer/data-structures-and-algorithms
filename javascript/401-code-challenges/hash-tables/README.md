@@ -31,8 +31,8 @@ Implement a Hashtable Class with the following methods:
 
   - Arguments: key
   - Returns: Index in the collection for that key
-<br/>
-<br/>
+</br>
+</br>
 
 ### Structure and Testing
 
