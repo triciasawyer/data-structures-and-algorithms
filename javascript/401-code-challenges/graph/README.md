@@ -51,19 +51,33 @@ Write tests to prove the following functionality:
 
 ## Whiteboard process
 
-[Ryan live demo whiteboarding](../whiteboard-images/Ryan-livedemo.png)
+![Ryan live demo whiteboarding - 35](../whiteboard-images/Ryan-livedemo.png)
+
+![Code challenge 36](../whiteboard-images/whiteboard36.png)
 
 ## Approach and Efficiency
 
 My BigO
 
+Challenge 35
+
 Time: O(1) for most operations, except for getNodes() which is O(n)
+Space: O(n)
+</br>
+</br>
+
+Challenge 36
+
+Time: O(n + e) -> (Can also use V to represent vertices (nodes), and e represents the number of edges)
 Space: O(n)
 
 ## Collaborators
 
-Ryan graph data structure demo and chatgpt to help fix tests that weren't passing due to some of my code that needed to be edited.
+- Lab 35 - Ryan graph data structure demo and chatgpt to help fix tests that weren't passing due to some of my code that needed to be edited.
+- Lab 36 - Documentation about graphs and breadthFirst, and Chat gpt to help write tests.
 
 ## Links and Resources
 
 [Loop graph theory](https://en.wikipedia.org/wiki/Loop_(graph_theory))
+
+[Breadth First - Geeks for Geeks](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
