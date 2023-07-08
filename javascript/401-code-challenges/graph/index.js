@@ -40,8 +40,8 @@ class Graph {
 
   // code challenge 36, graph breadth first implementation
   breadthFirst(node) {
-    if (!node) {
-      return [];
+    if (!this.graph.has(node)) {
+      return []
     }
 
     let visited = new Set();
