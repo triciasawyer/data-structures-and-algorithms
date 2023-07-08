@@ -128,28 +128,31 @@ describe('Graph', () => {
 
 });
 
-  describe('Business trip using a graph', () => {
-    const graph = {
-      Seattle: { Portland: 100, SanFrancisco: 200 },
-      Portland: { Seattle: 100, SanFrancisco: 300 },
-      SanFrancisco: { Seattle: 200, Portland: 300 },
-    };
 
-    test('should return the total cost of a direct trip', () => {
-      const cities = ['Seattle', 'Portland'];
-      const result = businessTrip(graph, cities);
-
-      expect(result).toBe(100);
-    });
+describe('Business trip using a graph', () => {
+  const graphData = {
+    Seattle: { Portland: 100, SanFrancisco: 200 },
+    Portland: { Seattle: 100, SanFrancisco: 300 },
+    SanFrancisco: { Seattle: 200, Portland: 300 },
+  };
 
 
-    test('should return null for an invalid trip with no direct flight connection', () => {
-      const cities = ['Seattle', 'San Francisco'];
-      const result = businessTrip(graph, cities);
+  test('should return the total cost of a trip', () => {
+    const cities = ['Seattle', 'Portland'];
+    const result = businessTrip(graphData, cities);
 
-      expect(result).toBeNull();
-    });
-
+    expect(result).toBe(100);
   });
+
+
+  test('should return null for an invalid trip with no direct flight connection', () => {
+    const cities = ['Seattle', 'San Francisco'];
+    const result = businessTrip(graphData, cities);
+
+    expect(result).toBeNull();
+  });
+
+
+});
 
 
