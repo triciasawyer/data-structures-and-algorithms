@@ -131,17 +131,24 @@ describe('Graph', () => {
 
 describe('Business trip using a graph', () => {
   const graphData = {
-    Seattle: { Portland: 100, SanFrancisco: 200 },
-    Portland: { Seattle: 100, SanFrancisco: 300 },
-    SanFrancisco: { Seattle: 200, Portland: 300 },
+    Seattle: { LosAngeles: 100, SanFrancisco: 200 },
+    LosAngeles: { Seattle: 100, SanFrancisco: 300 },
+    SanFrancisco: { Seattle: 200, LosAngeles: 300 },
   };
 
 
   test('should return the total cost of a trip', () => {
-    const cities = ['Seattle', 'Portland'];
+    const cities = ['Seattle', 'LosAngeles'];
     const result = businessTrip(graphData, cities);
 
     expect(result).toBe(100);
+  });
+
+  test('should return the total cost of a trip with multiple flights', () => {
+    const cities = ['Seattle', 'LosAngeles', 'SanFrancisco'];
+    const result = businessTrip(graphData, cities);
+
+    expect(result).toBe(400);
   });
 
 
