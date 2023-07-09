@@ -64,11 +64,11 @@ You can also just write at least three test assertions for each method that you 
 
 ## Whiteboard process
 
-![Ryan live demo whiteboarding - 35](../whiteboard-images/Ryan-livedemo.png)
+Code Challenge 35![Ryan live demo whiteboarding - 35](../whiteboard-images/Ryan-livedemo.png)
 
-![Code challenge 36](../whiteboard-images/whiteboard36.png)
+Code Challenge 36![Code challenge 36](../whiteboard-images/whiteboard36.png)
 
-![Code challenge 37](../whiteboard-images/)
+Code Challenge 37![Code challenge 37](../whiteboard-images/whiteboard37.png)
 
 ## Approach and Efficiency
 
@@ -97,6 +97,7 @@ Space: O(1)
 
 - Lab 35 - Ryan graph data structure demo and chatgpt to help fix tests that weren't passing due to some of my code that needed to be edited.
 - Lab 36 - Documentation about graphs and breadthFirst, and Chat gpt to help write tests.
+- Lab 37 - Used chatgpt to help with tests
 
 ## Links and Resources
 
