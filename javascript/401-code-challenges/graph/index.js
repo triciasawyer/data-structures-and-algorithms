@@ -16,7 +16,6 @@ class Graph {
     if (this.graph.has(node1) && this.graph.has(node2)) {
       const edge = new Edge(node1, node2, weight);
       this.graph.get(node1).push(edge);
-      // this.graph.get(node2).push(edge);
     }
   }
 
@@ -65,7 +64,33 @@ class Graph {
     }
     return visitedOrder;
   }
+
+  
+  // code challenge 38
+  depthFirst(startNode) {
+    const visited = new Set();
+    const traversalOrder = [];
+
+    const depthHelper = (node) => {
+      visited.add(node);
+      const neighbors = this.graph.get(node);
+
+      if (neighbors) {
+        traversalOrder.push(node);
+
+        for (const neighbor of neighbors) {
+          if (!visited.has(neighbor.node2)) {
+            depthHelper(neighbor.node2);
+          }
+        }
+      }
+    };
+
+    depthHelper(startNode);
+    return traversalOrder;
+  }
 }
+
 
 class Node {
   constructor(value) {
