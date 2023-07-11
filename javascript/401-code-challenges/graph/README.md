@@ -74,7 +74,7 @@ Code Challenge 36![Code challenge 36](../whiteboard-images/whiteboard36.png)
 
 Code Challenge 37![Code challenge 37](../whiteboard-images/whiteboard37.png)
 
-Code Challenge 38![Code Challenge 38](../whiteboard-images/)
+Code Challenge 38![Code Challenge 38](../whiteboard-images/whiteboard38.png)
 
 ## Approach and Efficiency
 
