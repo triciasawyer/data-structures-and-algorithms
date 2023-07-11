@@ -67,7 +67,6 @@ class Graph {
   }
 }
 
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -93,5 +92,23 @@ class Edge {
   }
 }
 
+// Code challenge 37
+function businessTrip(graph, cities) {
+  let totalCost = 0;
 
-module.exports = { Graph, Node, Edge };
+  for (let i = 0; i < cities.length - 1; i++) {
+    const currentCity = cities[i];
+    const nextCity = cities[i + 1];
+
+    if (!graph[currentCity] || !graph[currentCity][nextCity]) {
+      return null; // No direct flight connection
+    }
+
+    totalCost += graph[currentCity][nextCity];
+  }
+
+  return totalCost;
+}
+
+
+module.exports = { Graph, Node, Edge, businessTrip };

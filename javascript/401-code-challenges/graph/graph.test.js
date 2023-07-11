@@ -1,4 +1,4 @@
-const { Graph, Node } = require('./index');
+const { Graph, Node, businessTrip } = require('./index');
 
 
 describe('Graph', () => {
@@ -125,5 +125,41 @@ describe('Graph', () => {
 
     expect(visitedOrder).toEqual([]);
   });
+
 });
+
+
+describe('Business trip using a graph', () => {
+  const graphData = {
+    Seattle: { LosAngeles: 100, SanFrancisco: 200 },
+    LosAngeles: { Seattle: 100, SanFrancisco: 300 },
+    SanFrancisco: { Seattle: 200, LosAngeles: 300 },
+  };
+
+
+  test('should return the total cost of a trip', () => {
+    const cities = ['Seattle', 'LosAngeles'];
+    const result = businessTrip(graphData, cities);
+
+    expect(result).toBe(100);
+  });
+
+  test('should return the total cost of a trip with multiple flights', () => {
+    const cities = ['Seattle', 'LosAngeles', 'SanFrancisco'];
+    const result = businessTrip(graphData, cities);
+
+    expect(result).toBe(400);
+  });
+
+
+  test('should return null for an invalid trip with no direct flight connection', () => {
+    const cities = ['Seattle', 'San Francisco'];
+    const result = businessTrip(graphData, cities);
+
+    expect(result).toBeNull();
+  });
+
+
+});
+
 
