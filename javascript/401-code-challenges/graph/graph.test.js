@@ -72,7 +72,7 @@ describe('Graph', () => {
     expect(graph.size()).toBe(3);
   });
 
-// Node can connect itself!
+  // Node can connect itself!
   test('A graph with only one node and edge can be properly returned', () => {
     const graph = new Graph();
     const nodeA = graph.addNode('A');
@@ -159,7 +159,47 @@ describe('Business trip using a graph', () => {
     expect(result).toBeNull();
   });
 
-
 });
 
+// depth first tests
+describe('Depth-first functionality', () => {
+  test('should apply a depth-first traversal on a simple graph', () => {
+    const graph1 = new Graph();
+    const nodeA = graph1.addNode('A');
+    const nodeB = graph1.addNode('B');
+    const nodeC = graph1.addNode('C');
+    const nodeD = graph1.addNode('D');
+    graph1.addEdge(nodeA, nodeB);
+    graph1.addEdge(nodeB, nodeC);
+    graph1.addEdge(nodeC, nodeD);
 
+    const traversalOrder1 = graph1.depthFirst(nodeA);
+    const nodeValues = traversalOrder1.map(node => node.value);
+
+    expect(nodeValues).toEqual(['A', 'B', 'C', 'D']);
+  });
+
+
+  // Test 2: Depth-first traversal on a disconnected graph
+  test('should apply a depth-first traversal on a disconnected graph', () => {
+    const graph2 = new Graph();
+    const nodeE = graph2.addNode('E');
+    const nodeF = graph2.addNode('F');
+    graph2.addEdge(nodeE, nodeF);
+
+    const traversalOrder2 = graph2.depthFirst(nodeE);
+    const nodeValues = traversalOrder2.map(node => node.value);
+
+    expect(nodeValues).toEqual(['E', 'F']);
+  });
+
+
+  test('should handle an empty graph', () => {
+    const graph = new Graph();
+
+    const traversalOrder = graph.depthFirst('A');
+    expect(traversalOrder).toEqual([]);
+  });
+
+
+});

@@ -6,7 +6,7 @@ Graphs
 
 ### Features
 
-- Lab 35
+- Challenge 35
 
 Implement your own Graph. The graph should be represented as an adjacency list, and should include the following methods:
 
@@ -38,14 +38,18 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
   - Returns the total number of nodes in the graph
   - 0 if there are none
 
-- Lab 36
+- Challenge 36
 
-- Lab 37
+- Challenge 37
 
 Write a function called business trip
 Arguments: graph, array of city names
 Return: the cost of the trip (if it’s possible) or null (if not)
 Determine whether the trip is possible with direct flights, and how much it would cost.
+
+- Challenge 38
+
+Write a method for the Graph class that is called depthFirst, that takes in a node as an argument and returns a collection of nodes in their pre-order depth-first traversal order.
 
 ### Structure and Testing
 
@@ -70,6 +74,8 @@ Code Challenge 36![Code challenge 36](../whiteboard-images/whiteboard36.png)
 
 Code Challenge 37![Code challenge 37](../whiteboard-images/whiteboard37.png)
 
+Code Challenge 38![Code Challenge 38](../whiteboard-images/whiteboard38.png)
+
 ## Approach and Efficiency
 
 My BigO
@@ -93,11 +99,16 @@ Challenge 37
 Time: O(n)
 Space: O(1)
 
+Challenge 38
+
+Time: O(n + e)
+Space: O(n)
+
 ## Collaborators
 
-- Lab 35 - Ryan graph data structure demo and chatgpt to help fix tests that weren't passing due to some of my code that needed to be edited.
-- Lab 36 - Documentation about graphs and breadthFirst, and Chat gpt to help write tests.
-- Lab 37 - Used chatgpt to help with tests
+- Challenge 35 - Ryan graph data structure demo and chatgpt to help fix tests that weren't passing due to some of my code that needed to be edited.
+- Challenge 36 - Documentation about graphs and breadthFirst, and Chat gpt to help write tests.
+- Challenge 37 and 38 - Used chatgpt to help with tests and debugging code
 
 ## Links and Resources
 
